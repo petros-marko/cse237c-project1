@@ -5,11 +5,17 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:47:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:51:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="type=block variable=c factor=2 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:52:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir.cpp:20:0" msg_body="Unrolling loop 'VITIS_LOOP_50_1' (fir.cpp:50:19) in function 'fir' completely with a factor of 127">
-        <args Factor="127" LoopLoc="fir.cpp:50:19" LoopName="VITIS_LOOP_50_1"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="type=block variable=c factor=2 dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir.cpp:20:0" msg_body="Unrolling loop 'VITIS_LOOP_51_1' (fir.cpp:51:19) in function 'fir' completely with a factor of 127">
+        <args Factor="127" LoopLoc="fir.cpp:51:19" LoopName="VITIS_LOOP_51_1"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir.cpp:20:0" msg_body="Unrolling loop 'Shift_Accum_Loop' (fir.cpp:46:2) in function 'fir' completely with a factor of 127">
         <args Factor="127" LoopLoc="fir.cpp:46:2" LoopName="Shift_Accum_Loop"/>

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 12 14:05:05 2026
+    * Date:           Mon Oct 12 14:34:55 2026
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        fir.comp
     * Solution:       hls (Vivado IP Flow Target)
@@ -85,7 +85,7 @@
 |   tmp45_fu_1466_p2                           |     |        | tmp45      | add | fabric    | 0       |
 |   tmp197_fu_1746_p2                          |     |        | tmp197     | sub | fabric    | 0       |
 |   tmp47_fu_896_p2                            |     |        | tmp47      | add | fabric    | 0       |
-|   ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 | 1   |        | add_ln54_1 | add | dsp_slice | 3       |
+|   ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 | 1   |        | add_ln56_1 | add | dsp_slice | 3       |
 +----------------------------------------------+-----+--------+------------+-----+-----------+---------+
 
 
@@ -105,11 +105,13 @@
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+--------+---------+-------------------+
-| Type   | Options | Location          |
-+--------+---------+-------------------+
-| unroll |         | fir.cpp:47 in fir |
-| unroll |         | fir.cpp:51 in fir |
-+--------+---------+-------------------+
++---------------+--------------------------------------+----------------------+
+| Type          | Options                              | Location             |
++---------------+--------------------------------------+----------------------+
+| unroll        |                                      | fir.cpp:47 in fir    |
+| array_reshape | type=block variable=c factor=2 dim=1 | fir.cpp:48 in fir, c |
+| unroll        |                                      | fir.cpp:52 in fir    |
+| array_reshape | type=block variable=c factor=2 dim=1 | fir.cpp:53 in fir, c |
++---------------+--------------------------------------+----------------------+
 
 

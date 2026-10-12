@@ -205,20 +205,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_926_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp4" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp9_fu_991_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp9" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp20_fu_1085_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp20" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp25_fu_1246_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp25" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp32_fu_1426_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp32" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp143_fu_1735_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp143" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp156_fu_624_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp156" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp43_fu_820_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp43" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp178" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp179" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp45_fu_1466_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp45" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp197_fu_1746_p2" SOURCE="fir.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp197" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp47_fu_896_p2" SOURCE="fir.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp47" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln54_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_926_p2" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp9_fu_991_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp20_fu_1085_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp25_fu_1246_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp32_fu_1426_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp32" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp143_fu_1735_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp143" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp156_fu_624_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp156" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp43_fu_820_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp43" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp178" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp179" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp45_fu_1466_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp45" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp197_fu_1746_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp197" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp47_fu_896_p2" SOURCE="fir.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp47" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_1" VISIBLE="true"/>
                 <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="shift_reg_U" SOURCE="" STORAGESIZE="32 128 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p" URAM="0" VARIABLE="shift_reg" VISIBLE="true"/>
             </BindNodes>
         </Module>
@@ -339,7 +339,9 @@
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
         <Pragma type="unroll" location="fir.cpp:47" status="valid" parentFunction="fir" variable="" isDirective="0" options=""/>
-        <Pragma type="unroll" location="fir.cpp:51" status="valid" parentFunction="fir" variable="" isDirective="0" options=""/>
+        <Pragma type="array_reshape" location="fir.cpp:48" status="valid" parentFunction="fir" variable="c" isDirective="0" options="type=block variable=c factor=2 dim=1"/>
+        <Pragma type="unroll" location="fir.cpp:52" status="valid" parentFunction="fir" variable="" isDirective="0" options=""/>
+        <Pragma type="array_reshape" location="fir.cpp:53" status="valid" parentFunction="fir" variable="c" isDirective="0" options="type=block variable=c factor=2 dim=1"/>
     </PragmaReport>
 </profile>
 

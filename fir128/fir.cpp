@@ -45,10 +45,12 @@ void fir (
 	Shift_Accum_Loop:
 	for (i = N - 1; i > 0; i--){
 		#pragma HLS unroll
+		#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
 		shift_reg[i] = shift_reg[i - 1];
 	}
 	for (i = N - 1; i > 0; i--){
 		#pragma HLS unroll
+		#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
 		acc += shift_reg[i] * c[i];
 	}
 	acc += x * c[0];
