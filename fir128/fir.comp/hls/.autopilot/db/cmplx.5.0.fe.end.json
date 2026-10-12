@@ -1,56 +1,17 @@
 {
-    "1": {
-        "name": "fir_Pipeline_VITIS_LOOP_49_1",
-        "file": "fir.cpp",
-        "fileloc": "27",
-        "instructions": "27",
-        "total_instructions": "27",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "2",
-            "L": "3"
-        },
-        "stores": {
-            "L": "4"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "2": {
-        "name": "fir_Pipeline_Shift_Accum_Loop",
-        "file": "fir.cpp",
-        "fileloc": "28",
-        "instructions": "19",
-        "total_instructions": "19",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "1",
-            "L": "1"
-        },
-        "stores": {
-            "G": "1",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "0": {
         "name": "fir",
         "file": "fir.cpp",
         "fileloc": "16",
-        "instructions": "21",
-        "total_instructions": "67",
-        "calls": "2 1",
+        "instructions": "526",
+        "total_instructions": "526",
+        "calls": "",
         "basicblocks": "1",
         "loads": {
-            "L": "1"
+            "G": "127"
         },
         "stores": {
-            "G": "1"
+            "G": "128"
         }
     }
 }

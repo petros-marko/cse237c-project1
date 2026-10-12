@@ -11,6 +11,8 @@
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="/software/common/Xilinx_Vitis/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi33ELb1EEC2EDq33_i" off="0" region="0" recursive="0"/>
 <pragma file="/software/common/Xilinx_Vitis/Vitis/2024.2/common/technology/autopilot/etc/ap_common.h" line="515" pragmaType="inline" parentfunction="_ZN8ssdm_intILi5ELb1EEC2EDq5_i" off="0" region="0" recursive="0"/>
+<pragma file="fir.cpp" line="51" pragmaType="unroll" parentfunction="fir" factor="-1" skip_exit_check="0"/>
+<pragma file="fir.cpp" line="47" pragmaType="unroll" parentfunction="fir" factor="-1" skip_exit_check="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, true>::RType<32, true>::minus operator-<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<8, true>(ap_int_base<8, true> const&)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>

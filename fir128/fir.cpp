@@ -44,9 +44,11 @@ void fir (
 	acc = 0;
 	Shift_Accum_Loop:
 	for (i = N - 1; i > 0; i--){
+		#pragma HLS unroll
 		shift_reg[i] = shift_reg[i - 1];
 	}
 	for (i = N - 1; i > 0; i--){
+		#pragma HLS unroll
 		acc += shift_reg[i] * c[i];
 	}
 	acc += x * c[0];
