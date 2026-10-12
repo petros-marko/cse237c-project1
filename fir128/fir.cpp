@@ -25,7 +25,7 @@ void fir (
 	static
 		data_t shift_reg[N];
 		ap_int<32> acc;
-		int i;
+		ap_int<8> i;
 
 	acc = 0;
 	Shift_Accum_Loop:
