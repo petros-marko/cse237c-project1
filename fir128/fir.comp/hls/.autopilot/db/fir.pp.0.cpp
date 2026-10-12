@@ -5730,7 +5730,8 @@ __attribute__((sdx_kernel("fir", 0))) void fir (
  acc = 0;
  Shift_Accum_Loop:
  for (i = N - 1; i >= 0; i--){
-  if (i == 0) {
+#pragma HLS pipeline off
+ if (i == 0) {
    acc += x * c[0];
    shift_reg[0] = x;
   } else {
@@ -5739,5 +5740,5 @@ __attribute__((sdx_kernel("fir", 0))) void fir (
   }
  }
  *y = acc;
-# 55 "fir.cpp"
+# 56 "fir.cpp"
 }

@@ -18,32 +18,66 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.508</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>134</Best-caseLatency>
-<Average-caseLatency>134</Average-caseLatency>
-<Worst-caseLatency>134</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.340 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.340 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.340 us</Worst-caseRealTimeLatency>
-<Interval-min>135</Interval-min>
-<Interval-max>135</Interval-max>
+<Best-caseLatency>385</Best-caseLatency>
+<Average-caseLatency>513</Average-caseLatency>
+<Worst-caseLatency>513</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.850 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>5.130 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>5.130 us</Worst-caseRealTimeLatency>
+<Interval-min>386</Interval-min>
+<Interval-max>514</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<Shift_Accum_Loop>
+<Slack>7.30</Slack>
+<TripCount>128</TripCount>
+<Latency>
+<range>
+<min>384</min>
+<max>512</max>
+</range>
+</Latency>
+<AbsoluteTimeLatency>
+<range>
+<min>3840</min>
+<max>5120</max>
+</range>
+</AbsoluteTimeLatency>
+<IterationLatency>
+<range>
+<min>3</min>
+<max>4</max>
+</range>
+</IterationLatency>
+<InstanceList>
+</InstanceList>
+</Shift_Accum_Loop>
+</SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>fir.cpp:16</SourceLocation>
+<SourceLocation>fir.cpp:27</SourceLocation>
+<SummaryOfLoopViolations>
+<Shift_Accum_Loop>
+<Name>Shift_Accum_Loop</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>fir.cpp:38</SourceLocation>
+</Shift_Accum_Loop>
+</SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
+<BRAM_18K>1</BRAM_18K>
 <DSP>1</DSP>
-<FF>244</FF>
-<LUT>239</LUT>
+<FF>127</FF>
+<LUT>198</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

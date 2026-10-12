@@ -52,13 +52,13 @@ set NewPortList {[
  	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "x", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3"],
 		"CDFG" : "fir",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "134", "EstimateLatencyMax" : "134",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "385", "EstimateLatencyMax" : "513",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -69,59 +69,28 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "y", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_57", "Port" : "shift_reg", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "c", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_57", "Port" : "c", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_57", "Parent" : "0", "Child" : ["2", "3", "4", "5"],
-		"CDFG" : "fir_Pipeline_Shift_Accum_Loop",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "132", "EstimateLatencyMax" : "132",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "mul_i_i317", "Type" : "None", "Direction" : "I"},
-			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "acc_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "c", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
-			{"Name" : "Shift_Accum_Loop", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter3", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter3", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_57.shift_reg_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_57.c_U", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_57.mul_16s_5s_16_1_1_U1", "Parent" : "1"},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_57.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
+			{"Name" : "Shift_Accum_Loop", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.c_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_16s_5s_16_1_1_U1", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	fir {
-		y {Type O LastRead -1 FirstWrite 2}
+		y {Type O LastRead -1 FirstWrite 1}
 		x {Type I LastRead 0 FirstWrite -1}
-		shift_reg {Type IO LastRead -1 FirstWrite -1}
-		c {Type I LastRead -1 FirstWrite -1}}
-	fir_Pipeline_Shift_Accum_Loop {
-		mul_i_i317 {Type I LastRead 0 FirstWrite -1}
-		x {Type I LastRead 0 FirstWrite -1}
-		acc_1_out {Type O LastRead -1 FirstWrite 3}
 		shift_reg {Type IO LastRead -1 FirstWrite -1}
 		c {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "134", "Max" : "134"}
-	, {"Name" : "Interval", "Min" : "135", "Max" : "135"}
+	{"Name" : "Latency", "Min" : "385", "Max" : "513"}
+	, {"Name" : "Interval", "Min" : "386", "Max" : "514"}
 ]}
 
 set PipelineEnableSignalInfo {[

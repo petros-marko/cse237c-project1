@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Mon Oct 12 11:44:57 2026
+<item name = "Date">Mon Oct 12 11:52:00 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.712 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.508 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,18 +24,18 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">134, 134, 1.340 us, 1.340 us, 135, 135, no</column>
+<column name="">385, 513, 3.850 us, 5.130 us, 386, 514, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 132, 132, 1.320 us, 1.320 us, 128, 128, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Shift_Accum_Loop">384, 512, 3 ~ 4, -, -, 128, no</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 23, -</column>
+<column name="Expression">-, -, 0, 90, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">2, 1, 177, 196, 0</column>
-<column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 20, -</column>
-<column name="Register">-, -, 67, -, -</column>
+<column name="Instance">-, 1, 0, 6, -</column>
+<column name="Memory">1, -, 5, 10, 0</column>
+<column name="Multiplexer">-, -, 0, 92, -</column>
+<column name="Register">-, -, 122, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">~0, ~0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 2, 1, 177, 196, 0</column>
+<column name="mul_16s_5s_16_1_1_U1">mul_16s_5s_16_1_1, 0, 1, 0, 6, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -71,6 +71,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="c_U">c_ROM_AUTO_1R, 0, 5, 10, 0, 128, 5, 1, 640</column>
+<column name="shift_reg_U">shift_reg_RAM_AUTO_1R1W, 1, 0, 0, 0, 128, 32, 1, 4096</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -79,21 +81,35 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="mul_i_i317_fu_93_p2">+, 0, 0, 23, 16, 16</column>
+<column name="acc_1_fu_239_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln32_fu_229_p2">+, 0, 0, 15, 8, 2</column>
+<column name="add_ln38_fu_201_p2">+, 0, 0, 14, 7, 2</column>
+<column name="mul_i_i317_fu_159_p2">+, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln34_fu_191_p2">icmp, 0, 0, 15, 8, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="acc_fu_66">9, 2, 16, 32</column>
+<column name="ap_NS_fsm">31, 6, 1, 6</column>
+<column name="i_fu_70">9, 2, 8, 16</column>
+<column name="mul_i_i317_pn_reg_123">9, 2, 16, 32</column>
+<column name="shift_reg_address0_local">20, 4, 7, 28</column>
+<column name="shift_reg_d0_local">14, 3, 32, 96</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="acc_1_loc_fu_40">16, 0, 16, 0</column>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_i_i317_reg_119">15, 0, 16, 1</column>
-<column name="x_read_reg_108">32, 0, 32, 0</column>
+<column name="acc_fu_66">16, 0, 16, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="c_load_reg_304">5, 0, 5, 0</column>
+<column name="i_fu_70">8, 0, 8, 0</column>
+<column name="icmp_ln34_reg_285">1, 0, 1, 0</column>
+<column name="mul_i_i317_pn_reg_123">16, 0, 16, 0</column>
+<column name="mul_i_i317_reg_269">15, 0, 16, 1</column>
+<column name="trunc_ln39_reg_299">16, 0, 16, 0</column>
+<column name="x_read_reg_264">32, 0, 32, 0</column>
+<column name="zext_ln32_reg_280">8, 0, 64, 56</column>
 </table>
 </item>
 </section>
