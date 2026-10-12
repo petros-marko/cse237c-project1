@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'
 ================================================================
-* Date:           Mon Oct 12 13:28:37 2026
+* Date:           Mon Oct 12 13:35:30 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -41,7 +41,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Shift_Accum_Loop  |      511|      511|         4|          4|          4|   128|       yes|
+        |- Shift_Accum_Loop  |      511|      511|         4|          4|          5|   128|       yes|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 

@@ -410,7 +410,7 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="pipeline" location="fir.cpp:33" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=4"/>
+        <Pragma type="pipeline" location="fir.cpp:33" status="valid" parentFunction="fir" variable="" isDirective="0" options="II=5"/>
     </PragmaReport>
 </profile>
 

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 12 13:28:38 2026
+    * Date:           Mon Oct 12 13:35:30 2026
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        fir.comp
     * Solution:       hls (Vivado IP Flow Target)
@@ -105,7 +105,7 @@
 +----------+---------+-------------------+
 | Type     | Options | Location          |
 +----------+---------+-------------------+
-| pipeline | II=4    | fir.cpp:33 in fir |
+| pipeline | II=5    | fir.cpp:33 in fir |
 +----------+---------+-------------------+
 
 
