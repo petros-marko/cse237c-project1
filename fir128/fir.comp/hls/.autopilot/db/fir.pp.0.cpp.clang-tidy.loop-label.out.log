@@ -18,8 +18,8 @@
       ^~~
       VITIS_LOOP_1248_1: 
 /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp:3932:7: note: FIX-IT applied suggested code changes
-/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp:5738:2: warning: Added loop label VITIS_LOOP_52_1:   [xilinx-label-all-loops]
+/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp:5737:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
  for (i = N - 1; i > 0; i--){
  ^~~
- VITIS_LOOP_52_1: 
-/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp:5738:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_51_1: 
+/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp:5737:2: note: FIX-IT applied suggested code changes

@@ -10,41 +10,35 @@ use IEEE.numeric_std.all;
 --   
 --   
 --   
---   
 -- 
-entity fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_DSP48_0 is
+entity fir_mac_muladd_16s_5s_16ns_16_4_1_DSP48_0 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
     ce:  in  std_logic;
     in0:  in  std_logic_vector(16 - 1 downto 0);
-    in1:  in  std_logic_vector(16 - 1 downto 0);
-    in2:  in  std_logic_vector(4 - 1 downto 0);
-    in3:  in  std_logic_vector(16 - 1 downto 0);
+    in1:  in  std_logic_vector(5 - 1 downto 0);
+    in2:  in  std_logic_vector(16 - 1 downto 0);
     dout: out std_logic_vector(16 - 1 downto 0));
 
 end entity;
 
-architecture behav of fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_DSP48_0 is
-    signal b       : signed(18-1 downto 0);
+architecture behav of fir_mac_muladd_16s_5s_16ns_16_4_1_DSP48_0 is
     signal a       : signed(25-1 downto 0);
-    signal d       : signed(25-1 downto 0);
+    signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
     signal m       : signed(43-1 downto 0);
     signal p       : signed(48-1 downto 0);
-    signal ad      : signed(25-1 downto 0);
     signal m_reg   : signed(43-1 downto 0);
-    signal ad_reg  : signed(25-1 downto 0);
+    signal a_reg   : signed(25-1 downto 0);
     signal b_reg   : signed(18-1 downto 0);
     signal p_reg   : signed(48-1 downto 0);
 begin
-a <= signed(resize(unsigned(in0), 25));
-d <= signed(resize(unsigned(in1), 25));
-b <= signed(resize(unsigned(in2), 18));
-c <= signed(resize(unsigned(in3), 48));
+a  <= signed(resize(signed(in0), 25));
+b  <= signed(resize(signed(in1), 18));
+c  <= signed(resize(unsigned(in2), 48));
 
-ad <= a + d;
-m  <= ad_reg * b_reg;
+m  <= a_reg * b_reg;
 -- 
 p  <= m_reg + c;
 -- 
@@ -53,7 +47,7 @@ process (clk) begin
     if (clk'event and clk = '1') then
         if (ce = '1') then
             m_reg  <= m;
-            ad_reg <= ad;
+            a_reg  <= a;
             b_reg  <= b;
             p_reg  <= p;
         end if;
@@ -69,14 +63,13 @@ end architecture;
 Library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1 is
+entity fir_mac_muladd_16s_5s_16ns_16_4_1 is
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
         din0_WIDTH : INTEGER;
         din1_WIDTH : INTEGER;
         din2_WIDTH : INTEGER;
-        din3_WIDTH : INTEGER;
         dout_WIDTH : INTEGER);
     port (
 -- 
@@ -87,12 +80,11 @@ entity fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1 is
         din0 : IN STD_LOGIC_VECTOR(din0_WIDTH - 1 DOWNTO 0);
         din1 : IN STD_LOGIC_VECTOR(din1_WIDTH - 1 DOWNTO 0);
         din2 : IN STD_LOGIC_VECTOR(din2_WIDTH - 1 DOWNTO 0);
-        din3 : IN STD_LOGIC_VECTOR(din3_WIDTH - 1 DOWNTO 0);
         dout : OUT STD_LOGIC_VECTOR(dout_WIDTH - 1 DOWNTO 0));
 end entity;
 
-architecture arch of fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1 is
-    component fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_DSP48_0 is
+architecture arch of fir_mac_muladd_16s_5s_16ns_16_4_1 is
+    component fir_mac_muladd_16s_5s_16ns_16_4_1_DSP48_0 is
         port (
 -- 
             clk : IN STD_LOGIC;
@@ -102,12 +94,13 @@ architecture arch of fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1 is
             in0 : IN STD_LOGIC_VECTOR;
             in1 : IN STD_LOGIC_VECTOR;
             in2 : IN STD_LOGIC_VECTOR;
-            in3 : IN STD_LOGIC_VECTOR;
             dout : OUT STD_LOGIC_VECTOR);
     end component;
 
+
+
 begin
-    fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_DSP48_0_U :  component fir_ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_DSP48_0
+    fir_mac_muladd_16s_5s_16ns_16_4_1_DSP48_0_U :  component fir_mac_muladd_16s_5s_16ns_16_4_1_DSP48_0
     port map (
 -- 
         clk => clk,
@@ -117,8 +110,6 @@ begin
         in0 => din0,
         in1 => din1,
         in2 => din2,
-        in3 => din3,
         dout => dout);
 
 end architecture;
-
