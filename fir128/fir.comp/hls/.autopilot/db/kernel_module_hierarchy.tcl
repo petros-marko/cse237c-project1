@@ -1,5 +1,7 @@
 set ModuleHierarchy {[{
 "Name" : "fir","ID" : "0","Type" : "sequential",
-"SubLoops" : [
-	{"Name" : "Shift_Accum_Loop","ID" : "1","Type" : "no"},]
+"SubInsts" : [
+	{"Name" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_57","ID" : "1","Type" : "sequential",
+		"SubLoops" : [
+		{"Name" : "Shift_Accum_Loop","ID" : "2","Type" : "pipeline"},]},]
 }]}

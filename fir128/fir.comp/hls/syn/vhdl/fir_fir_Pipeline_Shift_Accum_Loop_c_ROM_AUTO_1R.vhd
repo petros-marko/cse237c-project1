@@ -7,7 +7,7 @@ library ieee;
 use ieee.std_logic_1164.all; 
 use ieee.std_logic_unsigned.all;
 
-entity fir_c_ROM_AUTO_1R is 
+entity fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R is 
     generic(
              DataWidth     : integer := 5; 
              AddressWidth     : integer := 7; 
@@ -25,7 +25,7 @@ entity fir_c_ROM_AUTO_1R is
 end entity; 
 
 
-architecture rtl of fir_c_ROM_AUTO_1R is 
+architecture rtl of fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R is 
  
 signal address0_tmp : std_logic_vector(AddressWidth-1 downto 0); 
 
