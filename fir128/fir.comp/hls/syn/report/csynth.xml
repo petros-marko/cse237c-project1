@@ -19,14 +19,14 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>30</Best-caseLatency>
-            <Average-caseLatency>30</Average-caseLatency>
-            <Worst-caseLatency>30</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
-            <Interval-min>31</Interval-min>
-            <Interval-max>31</Interval-max>
+            <Best-caseLatency>27</Best-caseLatency>
+            <Average-caseLatency>27</Average-caseLatency>
+            <Worst-caseLatency>27</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.270 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.270 us</Worst-caseRealTimeLatency>
+            <Interval-min>28</Interval-min>
+            <Interval-max>28</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
@@ -37,7 +37,7 @@
     <AreaEstimates>
         <Resources>
             <DSP>1</DSP>
-            <FF>4826</FF>
+            <FF>6277</FF>
             <LUT>2200</LUT>
             <BRAM_18K>0</BRAM_18K>
             <URAM>0</URAM>
@@ -157,7 +157,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>fir</ModuleName>
-            <BindInstances>tmp4_fu_789_p2 tmp9_fu_807_p2 tmp20_fu_849_p2 tmp143_fu_2376_p2 tmp24_fu_877_p2 grp_fu_2408_p0 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 tmp31_fu_1853_p2 tmp197_fu_2387_p2 tmp204_fu_895_p2 tmp32_fu_1093_p2 tmp33_fu_1870_p2 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1</BindInstances>
+            <BindInstances>tmp4_fu_1823_p2 tmp9_fu_1841_p2 tmp20_fu_1883_p2 tmp25_fu_1901_p2 tmp32_fu_1919_p2 tmp143_fu_2471_p2 tmp156_fu_1937_p2 tmp43_fu_1979_p2 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 tmp45_fu_1997_p2 tmp197_fu_2482_p2 tmp47_fu_2015_p2 ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -170,13 +170,13 @@
                     <EstimatedClockPeriod>6.603</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>30</Best-caseLatency>
-                    <Average-caseLatency>30</Average-caseLatency>
-                    <Worst-caseLatency>30</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>31</PipelineInitiationInterval>
+                    <Best-caseLatency>27</Best-caseLatency>
+                    <Average-caseLatency>27</Average-caseLatency>
+                    <Worst-caseLatency>27</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.270 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.270 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>28</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfViolations>
@@ -190,9 +190,9 @@
                     <DSP>1</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>4826</FF>
+                    <FF>6277</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>4</UTIL_FF>
+                    <UTIL_FF>5</UTIL_FF>
                     <LUT>2200</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>4</UTIL_LUT>
@@ -205,19 +205,19 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_789_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp4" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp9_fu_807_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp9" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp20_fu_849_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp20" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp143_fu_2376_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp143" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp24_fu_877_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp24" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="grp_fu_2408_p0" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_1823_p2" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp9_fu_1841_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp20_fu_1883_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp25_fu_1901_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp32_fu_1919_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp32" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp143_fu_2471_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp143" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp156_fu_1937_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp156" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp43_fu_1979_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp43" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp178" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp179" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp31_fu_1853_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp31" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp197_fu_2387_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp197" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp204_fu_895_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp204" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp32_fu_1093_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp32" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp33_fu_1870_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp33" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp45_fu_1997_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp45" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp197_fu_2482_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp197" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tmp47_fu_2015_p2" SOURCE="fir.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp47" VISIBLE="true"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1" SOURCE="fir.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_1" VISIBLE="true"/>
             </BindNodes>
         </Module>
@@ -337,8 +337,8 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="array_reshape" location="fir.cpp:23" status="valid" parentFunction="fir" variable="c" isDirective="0" options="type=block variable=c factor=2 dim=1"/>
-        <Pragma type="array_reshape" location="fir.cpp:30" status="valid" parentFunction="fir" variable="shift_reg" isDirective="0" options="type=block variable=shift_reg factor=2 dim=1"/>
+        <Pragma type="array_reshape" location="fir.cpp:23" status="valid" parentFunction="fir" variable="c" isDirective="0" options="variable=c type=complete dim=1"/>
+        <Pragma type="array_reshape" location="fir.cpp:30" status="valid" parentFunction="fir" variable="shift_reg" isDirective="0" options="variable=shift_reg type=complete dim=1"/>
         <Pragma type="unroll" location="fir.cpp:49" status="valid" parentFunction="fir" variable="" isDirective="0" options=""/>
         <Pragma type="unroll" location="fir.cpp:53" status="valid" parentFunction="fir" variable="" isDirective="0" options=""/>
     </PragmaReport>

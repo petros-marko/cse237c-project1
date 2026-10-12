@@ -18,8 +18,8 @@
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="fir.cpp" line="53" pragmaType="unroll" parentfunction="fir" factor="-1" skip_exit_check="0"/>
 <pragma file="fir.cpp" line="49" pragmaType="unroll" parentfunction="fir" factor="-1" skip_exit_check="0"/>
-<pragma file="fir.cpp" line="23" pragmaType="array_reshape" parentfunction="fir" dim="1" factor="2" mode="block" variable="c"/>
-<pragma file="fir.cpp" line="30" pragmaType="array_reshape" parentfunction="fir" dim="1" factor="2" mode="block" variable="_ZZ3firPiiE9shift_reg"/>
+<pragma file="fir.cpp" line="23" pragmaType="array_reshape" parentfunction="fir" dim="1" factor="0" mode="complete" variable="c"/>
+<pragma file="fir.cpp" line="30" pragmaType="array_reshape" parentfunction="fir" dim="1" factor="0" mode="complete" variable="_ZZ3firPiiE9shift_reg"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<8>::ap_int<8, true>(ap_int_base<8, true> const&)" off="0" region="0" recursive="0"/>

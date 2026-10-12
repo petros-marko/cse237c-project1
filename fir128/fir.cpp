@@ -20,14 +20,14 @@ void fir (
 {
 
 	ap_int<5> c[N] = {10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
-	#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
+	#pragma HLS ARRAY_RESHAPE variable=c type=complete dim=1
 	
 	// Write your code here
 	static
 		data_t shift_reg[N];
 		ap_int<16> acc;
 		ap_int<8> i;
-	#pragma HLS ARRAY_RESHAPE type=block variable=shift_reg factor=2 dim=1
+	#pragma HLS ARRAY_RESHAPE variable=shift_reg type=complete dim=1
 
 	// acc = 0;
 	// Shift_Accum_Loop:

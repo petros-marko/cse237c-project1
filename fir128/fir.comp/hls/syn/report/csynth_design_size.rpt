@@ -18,25 +18,25 @@
 |               | (1) array partition         |   642        | user array partition pragmas are applied                                               |
 |               | (2) simplification          |   642        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
 |               | (3) aggregate/disaggregate  |   642        | user struct aggregate/disaggregate pragmas are applied                                 |
-|               | (4) array reshape           | 1,026        | apply array reshape pragmas                                                            |
-|               | (5) access patterns         |   771        | array access pattern optmizations                                                      |
+|               | (4) array reshape           | 1,024        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   642        | array access pattern optmizations                                                      |
 |               |                             |              |                                                                                        |
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
-|               | (1) loop simplification     |   771        | loop and instruction simplification                                                    |
-|               | (2) parallelization         |   771        | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         |   833        | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          |   833        | simplification of design after performance transformations                             |
+|               | (1) loop simplification     |   642        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   642        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |   642        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   642        | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                |   837        | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           |   774        | high level synthesis optimizations                                                     |
+|               | (1) lowering                |   646        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   647        | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location   | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
-|   fir    | fir.cpp:16 | 3,070        | 643           | 771          | 833         | 774           |
+|   fir    | fir.cpp:16 | 3,070        | 643           | 642          | 642         | 647           |
 +----------+------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings
