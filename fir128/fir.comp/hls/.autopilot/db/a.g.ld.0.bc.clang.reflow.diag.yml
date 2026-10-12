@@ -9,13 +9,3 @@ Args:
   - Caller:          apatb_fir_ir
   - String:          ' because it should never be inlined (cost=never)'
 ...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        Shift_Accum_Loop
-  - String:          '> at '
-  - LoopLoc:         'fir.cpp:46:2'
-  - String:          ' '
-...

@@ -8,11 +8,7 @@ module fir_shift_reg_RAM_AUTO_1R1W (
      
     address0, ce0,
     d0, we0, 
-    
-      
-    address1, ce1,
-    
-    q1, 
+    q0, 
      
     reset, clk);
 
@@ -24,12 +20,7 @@ input[AddressWidth-1:0] address0;
 input ce0;
 input[DataWidth-1:0] d0;
 input we0; 
-
- 
-input[AddressWidth-1:0] address1;
-input ce1;
-
-output reg[DataWidth-1:0] q1; 
+output reg[DataWidth-1:0] q0; 
 
 input reset;
 input clk;
@@ -42,28 +33,20 @@ end
 
  
 
+
+
+
+
+//read first
 always @(posedge clk)  
 begin 
     if (ce0) begin
         if (we0) 
             ram[address0] <= d0; 
+        q0 <= ram[address0];
+
     end
 end 
-
-
-
- 
-  
-
-
-
-always @(posedge clk) 
-begin 
-    if (ce1) begin
-        q1 <= ram[address1];
-    end
-end 
-
  
  
 
