@@ -1,3 +1,55 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 53, Column: 19 }
+Function:        _Z3firPii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: fir.cpp, Line: 49, Column: 2 }
+Function:        _Z3firPii
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Shift_Accum_Loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 20, Column: 0 }
+Function:        _Z3firPii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_53_1
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:53:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '127'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir.cpp, Line: 20, Column: 0 }
+Function:        _Z3firPii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_Accum_Loop
+  - String:          ''' ('
+  - LoopLoc:         'fir.cpp:49:2'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '127'
+...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
@@ -12,24 +64,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-reshape
 Name:            ArrayXform
-Function:        _Z3firPii
-Args:            
-  - String:          'Applying '
-  - String:          array_reshape
-  - String:          ' to '''
-  - UOName:          c
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' reshaping'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-reshape
-Name:            ArrayXform
-DebugLoc:        { File: fir.cpp, Line: 27, Column: 0 }
+DebugLoc:        { File: fir.cpp, Line: 28, Column: 0 }
 Function:        _Z3firPii
 Args:            
   - String:          'Applying '
@@ -43,24 +78,4 @@ Args:
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        Shift_Accum_Loop
-  - String:          '> at '
-  - LoopLoc:         'fir.cpp:48:2'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_51_1
-  - String:          '> at '
-  - LoopLoc:         'fir.cpp:51:19'
-  - String:          ' '
 ...

@@ -5718,6 +5718,7 @@ __attribute__((sdx_kernel("fir", 0))) void fir (
 #pragma HLSDIRECTIVE TOP name=fir
 # 20 "fir.cpp"
 
+#pragma HLS PIPELINE II=1
 
  ap_int<5> c[N] = {10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
 #pragma HLS ARRAY_RESHAPE variable=c type=complete dim=1
@@ -5728,14 +5729,16 @@ __attribute__((sdx_kernel("fir", 0))) void fir (
   ap_int<16> acc;
   ap_int<8> i;
 #pragma HLS ARRAY_RESHAPE variable=shift_reg type=complete dim=1
-# 46 "fir.cpp"
+# 47 "fir.cpp"
  acc = 0;
  Shift_Accum_Loop:
  for (i = N - 1; i > 0; i--){
-  shift_reg[i] = shift_reg[i - 1];
+#pragma HLS UNROLL
+ shift_reg[i] = shift_reg[i - 1];
  }
- VITIS_LOOP_51_1: for (i = N - 1; i > 0; i--){
-  acc += shift_reg[i] * c[i];
+ VITIS_LOOP_53_1: for (i = N - 1; i > 0; i--){
+#pragma HLS UNROLL
+ acc += shift_reg[i] * c[i];
  }
  acc += x * c[0];
  shift_reg[0] = x;

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 12 14:48:59 2026
+    * Date:           Mon Oct 12 14:56:05 2026
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        fir.comp
     * Solution:       hls (Vivado IP Flow Target)
@@ -15,16 +15,12 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-------------+-------------+-----+
-    |              Modules             | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |             |             |     |
-    |              & Loops             | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |      FF     |     LUT     | URAM|
-    +----------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-------------+-------------+-----+
-    |+ fir                             |     -|  0.43|      393|  3.930e+03|         -|      394|     -|        no|     -|  1 (~0%)|  12494 (11%)|  11186 (21%)|    -|
-    | + fir_Pipeline_Shift_Accum_Loop  |     -|  0.75|      257|  2.570e+03|         -|      257|     -|        no|     -|        -|    8243 (7%)|   5405 (10%)|    -|
-    |  o Shift_Accum_Loop              |    II|  7.30|      255|  2.550e+03|         3|        2|   127|       yes|     -|        -|            -|            -|    -|
-    | + fir_Pipeline_VITIS_LOOP_51_1   |     -|  0.43|      132|  1.320e+03|         -|      132|     -|        no|     -|  1 (~0%)|    120 (~0%)|    1494 (2%)|    -|
-    |  o VITIS_LOOP_51_1               |     -|  7.30|      130|  1.300e+03|         5|        1|   127|       yes|     -|        -|            -|            -|    -|
-    +----------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-------------+-------------+-----+
+    +--------+------+------+---------+---------+----------+---------+------+----------+------+---------+-------------+-----------+-----+
+    | Modules| Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |             |           |     |
+    | & Loops| Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |      FF     |    LUT    | URAM|
+    +--------+------+------+---------+---------+----------+---------+------+----------+------+---------+-------------+-----------+-----+
+    |+ fir   |     -|  0.70|       27|  270.000|         -|        1|     -|       yes|     -|  1 (~0%)|  10783 (10%)|  4248 (7%)|    -|
+    +--------+------+------+---------+---------+----------+---------+------+----------+------+---------+-------------+-----------+-----+
 
 
 ================================================================
@@ -72,24 +68,25 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+------------------------------------------------+-----+--------+-----------+------------+-----------+---------+
-| Name                                           | DSP | Pragma | Variable  | Op         | Impl      | Latency |
-+------------------------------------------------+-----+--------+-----------+------------+-----------+---------+
-| + fir                                          | 1   |        |           |            |           |         |
-|  + fir_Pipeline_Shift_Accum_Loop               | 0   |        |           |            |           |         |
-|    icmp_ln48_fu_72_p2                          |     |        | icmp_ln48 | seteq      | auto      | 0       |
-|    add_ln49_fu_81_p2                           |     |        | add_ln49  | add        | fabric    | 0       |
-|    partselect_32ns_4096ns_64ns_32_1_1_U1       |     |        | tmp       | partselect | auto      | 0       |
-|    partset_4096ns_4096ns_32ns_64ns_4096_1_1_U2 |     |        | tmp_1     | partset    | auto      | 0       |
-|  + fir_Pipeline_VITIS_LOOP_51_1                | 1   |        |           |            |           |         |
-|    icmp_ln51_fu_80_p2                          |     |        | icmp_ln51 | seteq      | auto      | 0       |
-|    partselect_32ns_4096ns_64ns_32_1_1_U7       |     |        | tmp_2     | partselect | auto      | 0       |
-|    add_ln52_fu_135_p2                          |     |        | add_ln52  | add        | fabric    | 0       |
-|    partselect_5ns_640ns_64ns_5_1_1_U8          |     |        | tmp_3     | partselect | auto      | 0       |
-|    mac_muladd_16s_5s_16ns_16_4_1_U9            | 1   |        | mul_ln52  | mul        | dsp_slice | 3       |
-|    mac_muladd_16s_5s_16ns_16_4_1_U9            | 1   |        | acc_1     | add        | dsp_slice | 3       |
-|    add_ln51_fu_110_p2                          |     |        | add_ln51  | add        | fabric    | 0       |
-+------------------------------------------------+-----+--------+-----------+------------+-----------+---------+
++----------------------------------------------+-----+--------+------------+-----+-----------+---------+
+| Name                                         | DSP | Pragma | Variable   | Op  | Impl      | Latency |
++----------------------------------------------+-----+--------+------------+-----+-----------+---------+
+| + fir                                        | 1   |        |            |     |           |         |
+|   tmp4_fu_1827_p2                            |     |        | tmp4       | add | fabric    | 0       |
+|   tmp9_fu_1845_p2                            |     |        | tmp9       | add | fabric    | 0       |
+|   tmp20_fu_1887_p2                           |     |        | tmp20      | add | fabric    | 0       |
+|   tmp25_fu_1905_p2                           |     |        | tmp25      | add | fabric    | 0       |
+|   tmp32_fu_1923_p2                           |     |        | tmp32      | add | fabric    | 0       |
+|   tmp143_fu_2475_p2                          |     |        | tmp143     | add | fabric    | 0       |
+|   tmp156_fu_1941_p2                          |     |        | tmp156     | add | fabric    | 0       |
+|   tmp43_fu_1983_p2                           |     |        | tmp43      | add | fabric    | 0       |
+|   ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 | 1   |        | tmp178     | add | dsp_slice | 3       |
+|   ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 | 1   |        | tmp179     | mul | dsp_slice | 3       |
+|   tmp45_fu_2001_p2                           |     |        | tmp45      | add | fabric    | 0       |
+|   tmp197_fu_2486_p2                          |     |        | tmp197     | sub | fabric    | 0       |
+|   tmp47_fu_2019_p2                           |     |        | tmp47      | add | fabric    | 0       |
+|   ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1 | 1   |        | add_ln57_1 | add | dsp_slice | 3       |
++----------------------------------------------+-----+--------+------------+-----+-----------+---------+
 
 
 ================================================================
@@ -104,8 +101,11 @@
 +---------------+----------------------------------------+------------------------------+
 | Type          | Options                                | Location                     |
 +---------------+----------------------------------------+------------------------------+
-| array_reshape | variable=c type=complete dim=1         | fir.cpp:23 in fir, c         |
-| array_reshape | variable=shift_reg type=complete dim=1 | fir.cpp:30 in fir, shift_reg |
+| pipeline      | II=1                                   | fir.cpp:21 in fir            |
+| array_reshape | variable=c type=complete dim=1         | fir.cpp:24 in fir, c         |
+| array_reshape | variable=shift_reg type=complete dim=1 | fir.cpp:31 in fir, shift_reg |
+| unroll        |                                        | fir.cpp:50 in fir            |
+| unroll        |                                        | fir.cpp:54 in fir            |
 +---------------+----------------------------------------+------------------------------+
 
 
