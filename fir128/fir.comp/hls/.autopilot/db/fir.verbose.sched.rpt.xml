@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Mon Oct 12 13:24:16 2026
+<item name = "Date">Mon Oct 12 13:26:12 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">261, 261, 2.610 us, 2.610 us, 262, 262, no</column>
+<column name="">388, 388, 3.880 us, 3.880 us, 389, 389, no</column>
 </table>
 </item>
 <item name = "Detail">

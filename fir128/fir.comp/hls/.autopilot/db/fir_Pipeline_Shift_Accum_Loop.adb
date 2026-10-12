@@ -2957,8 +2957,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>259</mMinLatency>
-        <mMaxLatency>259</mMaxLatency>
+        <mMinLatency>386</mMinLatency>
+        <mMaxLatency>386</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -3002,12 +3002,12 @@
           <item>37</item>
           <item>45</item>
         </basic_blocks>
-        <mII>2</mII>
+        <mII>3</mII>
         <mDepth>4</mDepth>
         <mMinTripCount>128</mMinTripCount>
         <mMaxTripCount>128</mMaxTripCount>
-        <mMinLatency>257</mMinLatency>
-        <mMaxLatency>257</mMaxLatency>
+        <mMinLatency>384</mMinLatency>
+        <mMaxLatency>384</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -3345,7 +3345,7 @@
         </item>
       </dp_component_resource>
       <dp_expression_resource>
-        <count>5</count>
+        <count>6</count>
         <item_version>0</item_version>
         <item>
           <first>acc_1_out ( + ) </first>
@@ -3390,6 +3390,29 @@
             <item>
               <first>LUT</first>
               <second>14</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>ap_condition_116 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
             </item>
           </second>
         </item>
@@ -3546,7 +3569,7 @@
         </item>
       </dp_memory_resource>
       <dp_multiplexer_resource>
-        <count>10</count>
+        <count>11</count>
         <item_version>0</item_version>
         <item>
           <first>acc2_fu_48</first>
@@ -3582,7 +3605,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Size)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -3590,7 +3613,7 @@
             </item>
             <item>
               <first>(2Count)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>FF</first>
@@ -3598,7 +3621,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>14</second>
+              <second>20</second>
             </item>
           </second>
         </item>
@@ -3631,6 +3654,33 @@
         </item>
         <item>
           <first>ap_enable_reg_pp0_iter0</first>
+          <second>
+            <count>5</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Size)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(2Count)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>9</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>ap_enable_reg_pp0_iter1</first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -3820,7 +3870,7 @@
         </item>
       </dp_multiplexer_resource>
       <dp_register_resource>
-        <count>14</count>
+        <count>13</count>
         <item_version>0</item_version>
         <item>
           <first>acc2_fu_48</first>
@@ -3848,7 +3898,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>2</second>
+              <second>3</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -3856,7 +3906,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>2</second>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -4032,25 +4082,6 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln34_reg_209_pp0_iter1_reg</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>trunc_ln39_reg_228</first>
           <second>
             <count>3</count>
@@ -4167,7 +4198,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>65</item>
+            <item>66</item>
           </second>
         </item>
         <item>
@@ -4175,7 +4206,7 @@
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>55</item>
+            <item>56</item>
           </second>
         </item>
       </dp_memory_map>
@@ -4501,7 +4532,7 @@
         </nodes>
         <anchor_node>-1</anchor_node>
         <region_type>8</region_type>
-        <interval>2</interval>
+        <interval>3</interval>
         <pipe_depth>4</pipe_depth>
         <mDBIIViolationVec class_id="49" tracking_level="0" version="0">
           <count>0</count>

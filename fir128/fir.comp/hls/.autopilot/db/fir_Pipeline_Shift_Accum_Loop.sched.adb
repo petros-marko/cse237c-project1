@@ -2875,8 +2875,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>259</mMinLatency>
-			<mMaxLatency>259</mMaxLatency>
+			<mMinLatency>386</mMinLatency>
+			<mMaxLatency>386</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -2920,12 +2920,12 @@
 				<item>37</item>
 				<item>45</item>
 			</basic_blocks>
-			<mII>2</mII>
+			<mII>3</mII>
 			<mDepth>4</mDepth>
 			<mMinTripCount>128</mMinTripCount>
 			<mMaxTripCount>128</mMaxTripCount>
-			<mMinLatency>257</mMinLatency>
-			<mMaxLatency>257</mMaxLatency>
+			<mMinLatency>384</mMinLatency>
+			<mMaxLatency>384</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -3262,7 +3262,7 @@
 			</nodes>
 			<anchor_node>-1</anchor_node>
 			<region_type>8</region_type>
-			<interval>2</interval>
+			<interval>3</interval>
 			<pipe_depth>4</pipe_depth>
 			<mDBIIViolationVec class_id="34" tracking_level="0" version="0">
 				<count>0</count>

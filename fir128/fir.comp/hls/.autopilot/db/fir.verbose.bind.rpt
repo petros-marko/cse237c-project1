@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Mon Oct 12 13:24:16 2026
+* Date:           Mon Oct 12 13:26:12 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      261|      261|  2.610 us|  2.610 us|  262|  262|       no|
+    |      388|      388|  3.880 us|  3.880 us|  389|  389|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                         |                               |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
         |                 Instance                |             Module            |   min   |   max   |    min   |    max   | min | max |                      Type                      |
         +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
-        |grp_fir_Pipeline_Shift_Accum_Loop_fu_57  |fir_Pipeline_Shift_Accum_Loop  |      259|      259|  2.590 us|  2.590 us|  256|  256|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_fir_Pipeline_Shift_Accum_Loop_fu_57  |fir_Pipeline_Shift_Accum_Loop  |      386|      386|  3.860 us|  3.860 us|  384|  384|  loop auto-rewind stp (delay=0 clock cycles(s))|
         +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
         * Loop: 
