@@ -5,10 +5,10 @@
 <ModuleName>fir</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_53</InstName>
+<InstName>grp_fir_Pipeline_Shift_Accum_Loop_fu_57</InstName>
 <ModuleName>fir_Pipeline_Shift_Accum_Loop</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>53</ID>
+<ID>57</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -24,15 +24,15 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>133</Best-caseLatency>
-<Average-caseLatency>133</Average-caseLatency>
-<Worst-caseLatency>133</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.330 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.330 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.330 us</Worst-caseRealTimeLatency>
+<Best-caseLatency>132</Best-caseLatency>
+<Average-caseLatency>132</Average-caseLatency>
+<Worst-caseLatency>132</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.320 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.320 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.320 us</Worst-caseRealTimeLatency>
 <PipelineInitiationInterval>128</PipelineInitiationInterval>
 <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
@@ -41,10 +41,10 @@
 <Name>Shift_Accum_Loop</Name>
 <Slack>7.30</Slack>
 <TripCount>128</TripCount>
-<Latency>131</Latency>
-<AbsoluteTimeLatency>1.310 us</AbsoluteTimeLatency>
+<Latency>130</Latency>
+<AbsoluteTimeLatency>1.300 us</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>5</PipelineDepth>
+<PipelineDepth>4</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
@@ -69,13 +69,13 @@
 <BRAM_18K>2</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>~0</UTIL_BRAM>
-<DSP>2</DSP>
+<DSP>1</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>488</FF>
+<FF>177</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>256</LUT>
+<LUT>196</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <URAM>0</URAM>
@@ -158,7 +158,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -180,7 +180,7 @@
 <IOProtocol>ap_vld</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -202,16 +202,16 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.912</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>135</Best-caseLatency>
-<Average-caseLatency>135</Average-caseLatency>
-<Worst-caseLatency>135</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.350 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.350 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.350 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>136</PipelineInitiationInterval>
+<Best-caseLatency>134</Best-caseLatency>
+<Average-caseLatency>134</Average-caseLatency>
+<Worst-caseLatency>134</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.340 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.340 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.340 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>135</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -225,13 +225,13 @@
 <BRAM_18K>2</BRAM_18K>
 <AVAIL_BRAM>280</AVAIL_BRAM>
 <UTIL_BRAM>~0</UTIL_BRAM>
-<DSP>2</DSP>
+<DSP>1</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>588</FF>
+<FF>244</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>315</LUT>
+<LUT>239</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <URAM>0</URAM>

@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 12 11:35:41 2026
+    * Date:           Mon Oct 12 11:44:57 2026
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        fir.comp
     * Solution:       hls (Vivado IP Flow Target)
@@ -19,9 +19,9 @@
     |              Modules             | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |           |           |     |
     |              & Loops             | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
     +----------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
-    |+ fir                             |     -|  0.39|      135|  1.350e+03|         -|      136|     -|        no|  2 (~0%)|  2 (~0%)|  588 (~0%)|  315 (~0%)|    -|
-    | + fir_Pipeline_Shift_Accum_Loop  |     -|  0.39|      133|  1.330e+03|         -|      133|     -|        no|  2 (~0%)|  2 (~0%)|  488 (~0%)|  256 (~0%)|    -|
-    |  o Shift_Accum_Loop              |     -|  7.30|      131|  1.310e+03|         5|        1|   128|       yes|        -|        -|          -|          -|    -|
+    |+ fir                             |     -|  0.59|      134|  1.340e+03|         -|      135|     -|        no|  2 (~0%)|  1 (~0%)|  244 (~0%)|  239 (~0%)|    -|
+    | + fir_Pipeline_Shift_Accum_Loop  |     -|  0.59|      132|  1.320e+03|         -|      132|     -|        no|  2 (~0%)|  1 (~0%)|  177 (~0%)|  196 (~0%)|    -|
+    |  o Shift_Accum_Loop              |     -|  7.30|      130|  1.300e+03|         4|        1|   128|       yes|        -|        -|          -|          -|    -|
     +----------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
 
 
@@ -73,14 +73,14 @@
 +----------------------------------+-----+--------+------------+-------+--------+---------+
 | Name                             | DSP | Pragma | Variable   | Op    | Impl   | Latency |
 +----------------------------------+-----+--------+------------+-------+--------+---------+
-| + fir                            | 2   |        |            |       |        |         |
-|   mul_i_i317_fu_77_p2            |     |        | mul_i_i317 | add   | fabric | 0       |
-|  + fir_Pipeline_Shift_Accum_Loop | 2   |        |            |       |        |         |
-|    icmp_ln33_fu_130_p2           |     |        | icmp_ln33  | seteq | auto   | 0       |
-|    add_ln37_fu_136_p2            |     |        | add_ln37   | add   | fabric | 0       |
-|    mul_32s_5s_32_2_1_U1          | 2   |        | mul_ln38   | mul   | auto   | 1       |
-|    acc_fu_174_p2                 |     |        | acc        | add   | fabric | 0       |
-|    i_fu_152_p2                   |     |        | i          | add   | fabric | 0       |
+| + fir                            | 1   |        |            |       |        |         |
+|   mul_i_i317_fu_93_p2            |     |        | mul_i_i317 | add   | fabric | 0       |
+|  + fir_Pipeline_Shift_Accum_Loop | 1   |        |            |       |        |         |
+|    icmp_ln33_fu_134_p2           |     |        | icmp_ln33  | seteq | auto   | 0       |
+|    add_ln37_fu_140_p2            |     |        | add_ln37   | add   | fabric | 0       |
+|    mul_16s_5s_16_1_1_U1          | 1   |        | mul_ln38   | mul   | auto   | 0       |
+|    acc_fu_182_p2                 |     |        | acc        | add   | fabric | 0       |
+|    i_fu_156_p2                   |     |        | i          | add   | fabric | 0       |
 +----------------------------------+-----+--------+------------+-------+--------+---------+
 
 

@@ -24,7 +24,7 @@ void fir (
 	// Write your code here
 	static
 		data_t shift_reg[N];
-		ap_int<32> acc;
+		ap_int<16> acc;
 		ap_int<8> i;
 
 	acc = 0;

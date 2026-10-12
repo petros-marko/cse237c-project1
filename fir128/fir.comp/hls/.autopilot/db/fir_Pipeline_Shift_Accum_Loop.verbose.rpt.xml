@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'" level="0">
-<item name = "Date">Mon Oct 12 11:35:41 2026
+<item name = "Date">Mon Oct 12 11:44:57 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.912 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.712 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">133, 133, 1.330 us, 1.330 us, 128, 128, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="">132, 132, 1.320 us, 1.320 us, 128, 128, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Shift_Accum_Loop">131, 131, 5, 1, 1, 128, yes</column>
+<column name="- Shift_Accum_Loop">130, 130, 4, 1, 1, 128, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 87, -</column>
+<column name="Expression">-, -, 0, 71, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 2, 165, 50, -</column>
+<column name="Instance">-, 1, 0, 6, -</column>
 <column name="Memory">2, -, 5, 10, 0</column>
 <column name="Multiplexer">-, -, 0, 77, -</column>
-<column name="Register">-, -, 318, 32, -</column>
+<column name="Register">-, -, 172, 32, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">~0, ~0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_32s_5s_32_2_1_U1">mul_32s_5s_32_2_1, 0, 2, 165, 50, 0</column>
+<column name="mul_16s_5s_16_1_1_U1">mul_16s_5s_16_1_1, 0, 1, 0, 6, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -81,51 +81,47 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="acc_1_out">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln37_fu_136_p2">+, 0, 0, 14, 7, 2</column>
-<column name="i_fu_152_p2">+, 0, 0, 14, 7, 2</column>
-<column name="ap_condition_118">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_139">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln33_fu_130_p2">icmp, 0, 0, 14, 7, 1</column>
+<column name="acc_1_out">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln37_fu_140_p2">+, 0, 0, 14, 7, 2</column>
+<column name="i_fu_156_p2">+, 0, 0, 14, 7, 2</column>
+<column name="ap_condition_106">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_124">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln33_fu_134_p2">icmp, 0, 0, 14, 7, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="acc2_fu_44">9, 2, 32, 64</column>
+<column name="acc2_fu_48">9, 2, 16, 32</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_loop_exit_ready_pp0_iter4_reg">9, 2, 1, 2</column>
-<column name="ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4">9, 2, 32, 64</column>
-<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108">9, 2, 32, 64</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">9, 2, 1, 2</column>
+<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_112">9, 2, 16, 32</column>
+<column name="ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_112">9, 2, 16, 32</column>
 <column name="ap_sig_allocacmp_i1_load">9, 2, 7, 14</column>
-<column name="i1_fu_40">9, 2, 7, 14</column>
+<column name="i1_fu_44">9, 2, 7, 14</column>
 <column name="shift_reg_address1_local">14, 3, 7, 21</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="acc2_fu_44">32, 0, 32, 0</column>
+<column name="acc2_fu_48">16, 0, 16, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter3">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
-<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
-<column name="c_load_reg_229">5, 0, 5, 0</column>
-<column name="i1_fu_40">7, 0, 7, 0</column>
-<column name="icmp_ln33_reg_205">1, 0, 1, 0</column>
-<column name="mul_ln38_reg_239">32, 0, 32, 0</column>
-<column name="shift_reg_load_reg_224">32, 0, 32, 0</column>
-<column name="zext_ln32_reg_214">7, 0, 64, 57</column>
-<column name="icmp_ln33_reg_205">64, 32, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_112">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_112">16, 0, 16, 0</column>
+<column name="ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_112">16, 0, 16, 0</column>
+<column name="c_load_reg_237">5, 0, 5, 0</column>
+<column name="i1_fu_44">7, 0, 7, 0</column>
+<column name="icmp_ln33_reg_213">1, 0, 1, 0</column>
+<column name="trunc_ln38_reg_232">16, 0, 16, 0</column>
+<column name="zext_ln32_reg_222">7, 0, 64, 57</column>
+<column name="icmp_ln33_reg_213">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -141,9 +137,9 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
-<column name="mul_i_i317">in, 32, ap_none, mul_i_i317, scalar</column>
+<column name="mul_i_i317">in, 16, ap_none, mul_i_i317, scalar</column>
 <column name="x">in, 32, ap_none, x, scalar</column>
-<column name="acc_1_out">out, 32, ap_vld, acc_1_out, pointer</column>
+<column name="acc_1_out">out, 16, ap_vld, acc_1_out, pointer</column>
 <column name="acc_1_out_ap_vld">out, 1, ap_vld, acc_1_out, pointer</column>
 </table>
 </item>

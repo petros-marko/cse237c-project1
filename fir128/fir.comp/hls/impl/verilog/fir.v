@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=135,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=588,HLS_SYN_LUT=315,HLS_VERSION=2024_2}" *)
+(* CORE_GENERATION_INFO="fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.712000,HLS_SYN_LAT=134,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=244,HLS_SYN_LUT=239,HLS_VERSION=2024_2}" *)
 
 module fir (
         ap_clk,
@@ -41,21 +41,23 @@ reg y_ap_vld;
 
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [31:0] x_read_reg_88;
-wire   [31:0] mul_i_i317_fu_77_p2;
-reg   [31:0] mul_i_i317_reg_99;
-wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start;
-wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done;
-wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle;
-wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready;
-wire   [31:0] grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out;
-wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld;
-reg    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg;
+reg   [31:0] x_read_reg_108;
+wire   [15:0] mul_i_i317_fu_93_p2;
+reg   [15:0] mul_i_i317_reg_119;
+wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start;
+wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done;
+wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_idle;
+wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready;
+wire   [15:0] grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out;
+wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld;
+reg    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg   [31:0] acc_1_loc_fu_36;
+reg   [15:0] acc_1_loc_fu_40;
 wire    ap_CS_fsm_state3;
-wire   [31:0] empty_fu_65_p2;
-wire   [31:0] empty_5_fu_71_p2;
+wire   [12:0] empty_fu_69_p1;
+wire   [14:0] empty_5_fu_81_p1;
+wire   [15:0] p_shl_fu_73_p3;
+wire   [15:0] p_shl8_fu_85_p3;
 reg   [2:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -65,20 +67,20 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 3'd1;
-#0 grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg = 1'b0;
+#0 grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg = 1'b0;
 end
 
-fir_fir_Pipeline_Shift_Accum_Loop grp_fir_Pipeline_Shift_Accum_Loop_fu_53(
+fir_fir_Pipeline_Shift_Accum_Loop grp_fir_Pipeline_Shift_Accum_Loop_fu_57(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start),
-    .ap_done(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done),
-    .ap_idle(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle),
-    .ap_ready(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready),
-    .mul_i_i317(mul_i_i317_reg_99),
-    .x(x_read_reg_88),
-    .acc_1_out(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out),
-    .acc_1_out_ap_vld(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld)
+    .ap_start(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start),
+    .ap_done(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done),
+    .ap_idle(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_idle),
+    .ap_ready(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready),
+    .mul_i_i317(mul_i_i317_reg_119),
+    .x(x_read_reg_108),
+    .acc_1_out(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out),
+    .acc_1_out_ap_vld(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
@@ -91,26 +93,26 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= 1'b0;
+        grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= 1'b0;
     end else begin
         if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= 1'b1;
-        end else if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready == 1'b1)) begin
-            grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= 1'b0;
+            grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= 1'b1;
+        end else if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready == 1'b1)) begin
+            grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        acc_1_loc_fu_36 <= grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out;
+    if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        acc_1_loc_fu_40 <= grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        mul_i_i317_reg_99 <= mul_i_i317_fu_77_p2;
-        x_read_reg_88 <= x;
+        mul_i_i317_reg_119[15 : 1] <= mul_i_i317_fu_93_p2[15 : 1];
+        x_read_reg_108 <= x;
     end
 end
 
@@ -123,7 +125,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done == 1'b0)) begin
+    if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -174,7 +176,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -195,14 +197,22 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign empty_5_fu_71_p2 = x << 32'd1;
+assign empty_5_fu_81_p1 = x[14:0];
 
-assign empty_fu_65_p2 = x << 32'd3;
+assign empty_fu_69_p1 = x[12:0];
 
-assign grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start = grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg;
+assign grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start = grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg;
 
-assign mul_i_i317_fu_77_p2 = (empty_fu_65_p2 + empty_5_fu_71_p2);
+assign mul_i_i317_fu_93_p2 = (p_shl_fu_73_p3 + p_shl8_fu_85_p3);
 
-assign y = acc_1_loc_fu_36;
+assign p_shl8_fu_85_p3 = {{empty_5_fu_81_p1}, {1'd0}};
+
+assign p_shl_fu_73_p3 = {{empty_fu_69_p1}, {3'd0}};
+
+assign y = $signed(acc_1_loc_fu_40);
+
+always @ (posedge ap_clk) begin
+    mul_i_i317_reg_119[0] <= 1'b0;
+end
 
 endmodule //fir

@@ -25,7 +25,7 @@ end;
 architecture behav of fir is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=135,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=588,HLS_SYN_LUT=315,HLS_VERSION=2024_2}";
+    "fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.712000,HLS_SYN_LAT=134,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=244,HLS_SYN_LUT=239,HLS_VERSION=2024_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
@@ -35,30 +35,33 @@ architecture behav of fir is
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
+    constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
+    constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
 
     signal ap_CS_fsm : STD_LOGIC_VECTOR (2 downto 0) := "001";
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal x_read_reg_88 : STD_LOGIC_VECTOR (31 downto 0);
-    signal mul_i_i317_fu_77_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal mul_i_i317_reg_99 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld : STD_LOGIC;
-    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg : STD_LOGIC := '0';
+    signal x_read_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal mul_i_i317_fu_93_p2 : STD_LOGIC_VECTOR (15 downto 0);
+    signal mul_i_i317_reg_119 : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start : STD_LOGIC;
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done : STD_LOGIC;
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_idle : STD_LOGIC;
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready : STD_LOGIC;
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld : STD_LOGIC;
+    signal grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal acc_1_loc_fu_36 : STD_LOGIC_VECTOR (31 downto 0);
+    signal acc_1_loc_fu_40 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal empty_fu_65_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal empty_5_fu_71_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal empty_fu_69_p1 : STD_LOGIC_VECTOR (12 downto 0);
+    signal empty_5_fu_81_p1 : STD_LOGIC_VECTOR (14 downto 0);
+    signal p_shl_fu_73_p3 : STD_LOGIC_VECTOR (15 downto 0);
+    signal p_shl8_fu_85_p3 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -73,27 +76,27 @@ architecture behav of fir is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        mul_i_i317 : IN STD_LOGIC_VECTOR (31 downto 0);
+        mul_i_i317 : IN STD_LOGIC_VECTOR (15 downto 0);
         x : IN STD_LOGIC_VECTOR (31 downto 0);
-        acc_1_out : OUT STD_LOGIC_VECTOR (31 downto 0);
+        acc_1_out : OUT STD_LOGIC_VECTOR (15 downto 0);
         acc_1_out_ap_vld : OUT STD_LOGIC );
     end component;
 
 
 
 begin
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_53 : component fir_fir_Pipeline_Shift_Accum_Loop
+    grp_fir_Pipeline_Shift_Accum_Loop_fu_57 : component fir_fir_Pipeline_Shift_Accum_Loop
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start,
-        ap_done => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done,
-        ap_idle => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle,
-        ap_ready => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready,
-        mul_i_i317 => mul_i_i317_reg_99,
-        x => x_read_reg_88,
-        acc_1_out => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out,
-        acc_1_out_ap_vld => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld);
+        ap_start => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start,
+        ap_done => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done,
+        ap_idle => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_idle,
+        ap_ready => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready,
+        mul_i_i317 => mul_i_i317_reg_119,
+        x => x_read_reg_108,
+        acc_1_out => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out,
+        acc_1_out_ap_vld => grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld);
 
 
 
@@ -111,16 +114,16 @@ begin
     end process;
 
 
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg_assign_proc : process(ap_clk)
+    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= ap_const_logic_0;
+                grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= ap_const_logic_0;
             else
                 if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready = ap_const_logic_1)) then 
-                    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg <= ap_const_logic_0;
+                    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_ready = ap_const_logic_1)) then 
+                    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -129,8 +132,8 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
-                acc_1_loc_fu_36 <= grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out;
+            if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                acc_1_loc_fu_40 <= grp_fir_Pipeline_Shift_Accum_Loop_fu_57_acc_1_out;
             end if;
         end if;
     end process;
@@ -138,13 +141,14 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                mul_i_i317_reg_99 <= mul_i_i317_fu_77_p2;
-                x_read_reg_88 <= x;
+                    mul_i_i317_reg_119(15 downto 1) <= mul_i_i317_fu_93_p2(15 downto 1);
+                x_read_reg_108 <= x;
             end if;
         end if;
     end process;
+    mul_i_i317_reg_119(0) <= '0';
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done, ap_CS_fsm_state2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done, ap_CS_fsm_state2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -154,7 +158,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if (((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -179,9 +183,9 @@ begin
     end process;
 
 
-    ap_ST_fsm_state2_blk_assign_proc : process(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done)
+    ap_ST_fsm_state2_blk_assign_proc : process(grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done)
     begin
-        if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done = ap_const_logic_0)) then 
+        if ((grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state2_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state2_blk <= ap_const_logic_0;
@@ -219,11 +223,14 @@ begin
         end if; 
     end process;
 
-    empty_5_fu_71_p2 <= std_logic_vector(shift_left(unsigned(x),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
-    empty_fu_65_p2 <= std_logic_vector(shift_left(unsigned(x),to_integer(unsigned('0' & ap_const_lv32_3(31-1 downto 0)))));
-    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start <= grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg;
-    mul_i_i317_fu_77_p2 <= std_logic_vector(unsigned(empty_fu_65_p2) + unsigned(empty_5_fu_71_p2));
-    y <= acc_1_loc_fu_36;
+    empty_5_fu_81_p1 <= x(15 - 1 downto 0);
+    empty_fu_69_p1 <= x(13 - 1 downto 0);
+    grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start <= grp_fir_Pipeline_Shift_Accum_Loop_fu_57_ap_start_reg;
+    mul_i_i317_fu_93_p2 <= std_logic_vector(unsigned(p_shl_fu_73_p3) + unsigned(p_shl8_fu_85_p3));
+    p_shl8_fu_85_p3 <= (empty_5_fu_81_p1 & ap_const_lv1_0);
+    p_shl_fu_73_p3 <= (empty_fu_69_p1 & ap_const_lv3_0);
+        y <= std_logic_vector(IEEE.numeric_std.resize(signed(acc_1_loc_fu_40),32));
+
 
     y_ap_vld_assign_proc : process(ap_CS_fsm_state3)
     begin

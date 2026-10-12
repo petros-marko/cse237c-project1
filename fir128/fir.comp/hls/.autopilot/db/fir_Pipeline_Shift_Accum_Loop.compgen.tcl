@@ -1,8 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
-set name fir_mul_32s_5s_32_2_1
+set name fir_mul_16s_5s_16_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
@@ -34,7 +34,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_mul_i_i317 \
     op interface \
-    ports { mul_i_i317 { I 32 vector } } \
+    ports { mul_i_i317 { I 16 vector } } \
 } "
 }
 
@@ -64,7 +64,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_acc_1_out \
     op interface \
-    ports { acc_1_out { O 32 vector } acc_1_out_ap_vld { O 1 bit } } \
+    ports { acc_1_out { O 16 vector } acc_1_out_ap_vld { O 1 bit } } \
 } "
 }
 

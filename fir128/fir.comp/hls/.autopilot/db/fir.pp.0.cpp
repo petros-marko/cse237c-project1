@@ -5724,7 +5724,7 @@ __attribute__((sdx_kernel("fir", 0))) void fir (
 
  static
   data_t shift_reg[N];
-  ap_int<32> acc;
+  ap_int<16> acc;
   ap_int<8> i;
 
  acc = 0;
