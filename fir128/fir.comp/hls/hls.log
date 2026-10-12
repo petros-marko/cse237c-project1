@@ -16,35 +16,35 @@ INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1510] Running: create_clock -period 10 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.14 seconds. CPU system time: 0.04 seconds. Elapsed time: 7.73 seconds; current allocated memory: 658.816 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.14 seconds. CPU system time: 0.06 seconds. Elapsed time: 7.75 seconds; current allocated memory: 658.820 MB.
 INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.43 seconds. CPU system time: 1.07 seconds. Elapsed time: 5.64 seconds; current allocated memory: 660.332 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.78 seconds. CPU system time: 1.05 seconds. Elapsed time: 6 seconds; current allocated memory: 660.336 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 2,735 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 30 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 35 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,989 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 32 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 37 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 214-376] automatically set the pipeline for Loop< Shift_Accum_Loop> at fir.cpp:32:2 
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.94 seconds. CPU system time: 0.87 seconds. Elapsed time: 9.43 seconds; current allocated memory: 669.961 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 669.961 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.28 seconds. CPU system time: 0.98 seconds. Elapsed time: 9.71 seconds; current allocated memory: 669.988 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 669.988 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 670.027 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 670.043 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 670.047 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 690.539 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 691.375 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 670.066 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 690.965 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 691.570 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'fir' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -54,25 +54,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Shift_Accum_Loop'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'Shift_Accum_Loop'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.19 seconds; current allocated memory: 692.020 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.14 seconds; current allocated memory: 692.535 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 692.020 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 692.535 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'fir' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 692.020 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 692.535 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 692.020 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 692.535 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fir_Pipeline_Shift_Accum_Loop' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -81,7 +81,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_32s_5s_32_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_Pipeline_Shift_Accum_Loop'.
 INFO: [RTMG 210-278] Implementing memory 'fir_fir_Pipeline_Shift_Accum_Loop_shift_reg_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-279] Implementing memory 'fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 692.375 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 692.570 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -89,11 +89,11 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'fir/y' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir/x' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.16 seconds; current allocated memory: 692.375 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.35 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.59 seconds; current allocated memory: 693.770 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.35 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.55 seconds; current allocated memory: 695.645 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 692.570 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.34 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.6 seconds; current allocated memory: 694.027 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.39 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.63 seconds; current allocated memory: 695.844 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for fir.
 INFO: [VLOG 209-307] Generating Verilog RTL for fir.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 144.68 MHz
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:24; Allocated memory: 52.828 MB.
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:25; Allocated memory: 53.023 MB.

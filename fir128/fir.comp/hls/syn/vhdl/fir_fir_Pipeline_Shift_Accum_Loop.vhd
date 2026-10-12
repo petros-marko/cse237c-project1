@@ -16,7 +16,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    mul_i_i282 : IN STD_LOGIC_VECTOR (31 downto 0);
+    mul_i_i317 : IN STD_LOGIC_VECTOR (31 downto 0);
     x : IN STD_LOGIC_VECTOR (31 downto 0);
     acc_1_out : OUT STD_LOGIC_VECTOR (31 downto 0);
     acc_1_out_ap_vld : OUT STD_LOGIC );
@@ -67,12 +67,12 @@ attribute shreg_extract : string;
     signal c_load_reg_229 : STD_LOGIC_VECTOR (4 downto 0);
     signal grp_fu_166_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal mul_ln38_reg_239 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108 : STD_LOGIC_VECTOR (31 downto 0);
     signal zext_ln37_fu_142_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal i1_fu_40 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
@@ -347,14 +347,14 @@ begin
         end if;
     end process;
 
-    ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108_assign_proc : process (ap_clk)
+    ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_boolean_1 = ap_condition_118)) then
                 if ((icmp_ln33_fu_130_p2 = ap_const_lv1_1)) then 
-                    ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108 <= mul_i_i282;
+                    ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108 <= mul_i_i317;
                 elsif ((ap_const_boolean_1 = ap_const_boolean_1)) then 
-                    ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108;
+                    ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108;
                 end if;
             end if; 
         end if;
@@ -400,7 +400,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108;
+                ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108;
                 shift_reg_load_reg_224 <= shift_reg_q1;
             end if;
         end if;
@@ -409,7 +409,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter2 = ap_const_logic_1))) then
-                ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108;
+                ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108;
             end if;
         end if;
     end process;
@@ -417,7 +417,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_enable_reg_pp0_iter3 = ap_const_logic_1))) then
-                ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108;
+                ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108;
             end if;
         end if;
     end process;
@@ -432,7 +432,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    acc_1_out <= std_logic_vector(unsigned(ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4) + unsigned(acc2_fu_44));
+    acc_1_out <= std_logic_vector(unsigned(ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4) + unsigned(acc2_fu_44));
 
     acc_1_out_ap_vld_assign_proc : process(ap_block_pp0_stage0_11001, icmp_ln33_reg_205_pp0_iter3_reg, ap_loop_exit_ready_pp0_iter4_reg)
     begin
@@ -443,7 +443,7 @@ begin
         end if; 
     end process;
 
-    acc_fu_174_p2 <= std_logic_vector(unsigned(ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4) + unsigned(acc2_fu_44));
+    acc_fu_174_p2 <= std_logic_vector(unsigned(ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4) + unsigned(acc2_fu_44));
     add_ln37_fu_136_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i1_load) + unsigned(ap_const_lv7_7F));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -507,16 +507,16 @@ begin
 
     ap_loop_exit_ready <= ap_condition_exit_pp0_iter0_stage0;
 
-    ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4_assign_proc : process(icmp_ln33_reg_205_pp0_iter3_reg, mul_ln38_reg_239, ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108)
+    ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4_assign_proc : process(icmp_ln33_reg_205_pp0_iter3_reg, mul_ln38_reg_239, ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108)
     begin
         if ((icmp_ln33_reg_205_pp0_iter3_reg = ap_const_lv1_0)) then 
-            ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 <= mul_ln38_reg_239;
+            ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 <= mul_ln38_reg_239;
         else 
-            ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 <= ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108;
+            ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 <= ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108;
         end if; 
     end process;
 
-    ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+    ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     ap_ready <= ap_ready_sig;
 
     ap_ready_int_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_subdone)

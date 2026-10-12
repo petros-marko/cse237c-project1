@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Mon Oct 12 11:25:49 2026
+* Date:           Mon Oct 12 11:35:41 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -79,13 +79,13 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 5.80>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 4 'read' 'x_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%acc_1_loc = alloca i64 1"   --->   Operation 5 'alloca' 'acc_1_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i282)   --->   "%empty = shl i32 %x_read, i32 3"   --->   Operation 6 'shl' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i282)   --->   "%empty_5 = shl i32 %x_read, i32 1"   --->   Operation 7 'shl' 'empty_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (2.55ns) (out node of the LUT)   --->   "%mul_i_i282 = add i32 %empty, i32 %empty_5"   --->   Operation 8 'add' 'mul_i_i282' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 9 [2/2] (3.25ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i317)   --->   "%empty = shl i32 %x_read, i32 3"   --->   Operation 6 'shl' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i317)   --->   "%empty_5 = shl i32 %x_read, i32 1"   --->   Operation 7 'shl' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.55ns) (out node of the LUT)   --->   "%mul_i_i317 = add i32 %empty, i32 %empty_5"   --->   Operation 8 'add' 'mul_i_i317' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [2/2] (3.25ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
 
 State 2 <SV = 1> <Delay = 4.14>
-ST_2 : Operation 10 [1/2] (4.14ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 10 [1/2] (4.14ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [fir.cpp:16]   --->   Operation 11 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
@@ -107,7 +107,7 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 The critical path consists of the following:
 	wire read operation ('x') on port 'x' [5]  (0.000 ns)
 	'shl' operation 32 bit ('empty_5') [13]  (0.000 ns)
-	'add' operation 32 bit ('mul_i_i282') [14]  (2.552 ns)
+	'add' operation 32 bit ('mul_i_i317') [14]  (2.552 ns)
 	'call' operation 0 bit ('call_ln0') to 'fir_Pipeline_Shift_Accum_Loop' [15]  (3.254 ns)
 
  <State 2>: 4.140ns

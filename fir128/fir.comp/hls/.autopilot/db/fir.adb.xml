@@ -91,10 +91,10 @@ entry:8 %empty_5 = shl i32 %x_read, i32 1
 
 <Node id="14" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:9 %mul_i_i282 = add i32 %empty, i32 %empty_5
+entry:9 %mul_i_i317 = add i32 %empty, i32 %empty_5
 
 ]]></Node>
-<StgValue><ssdm name="mul_i_i282"/></StgValue>
+<StgValue><ssdm name="mul_i_i317"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="2" lat="2">
@@ -106,7 +106,7 @@ entry:9 %mul_i_i282 = add i32 %empty, i32 %empty_5
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5">
 <![CDATA[
-entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
+entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -124,7 +124,7 @@ entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, 
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5">
 <![CDATA[
-entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
+entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -289,13 +289,13 @@ entry:13 %ret_ln55 = ret
 </dataflow>
 <dataflow id="35" from="StgValue_34" to="empty_5" fromId="34" toId="7">
 </dataflow>
-<dataflow id="36" from="empty" to="mul_i_i282" fromId="6" toId="8">
+<dataflow id="36" from="empty" to="mul_i_i317" fromId="6" toId="8">
 </dataflow>
-<dataflow id="37" from="empty_5" to="mul_i_i282" fromId="7" toId="8">
+<dataflow id="37" from="empty_5" to="mul_i_i317" fromId="7" toId="8">
 </dataflow>
 <dataflow id="39" from="fir_Pipeline_Shift_Accum_Loop" to="call_ln0" fromId="38" toId="9">
 </dataflow>
-<dataflow id="40" from="mul_i_i282" to="call_ln0" fromId="8" toId="9">
+<dataflow id="40" from="mul_i_i317" to="call_ln0" fromId="8" toId="9">
 </dataflow>
 <dataflow id="41" from="x_read" to="call_ln0" fromId="4" toId="9">
 </dataflow>
@@ -307,7 +307,7 @@ entry:13 %ret_ln55 = ret
 </dataflow>
 <dataflow id="45" from="fir_Pipeline_Shift_Accum_Loop" to="call_ln0" fromId="38" toId="10">
 </dataflow>
-<dataflow id="46" from="mul_i_i282" to="call_ln0" fromId="8" toId="10">
+<dataflow id="46" from="mul_i_i317" to="call_ln0" fromId="8" toId="10">
 </dataflow>
 <dataflow id="47" from="x_read" to="call_ln0" fromId="4" toId="10">
 </dataflow>

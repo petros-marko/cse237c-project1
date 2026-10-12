@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'
 ================================================================
-* Date:           Mon Oct 12 11:25:49 2026
+* Date:           Mon Oct 12 11:35:41 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -116,8 +116,8 @@
     |acc2_fu_44                                  |   9|          2|   32|         64|
     |ap_done_int                                 |   9|          2|    1|          2|
     |ap_loop_exit_ready_pp0_iter4_reg            |   9|          2|    1|          2|
-    |ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4      |   9|          2|   32|         64|
-    |ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108  |   9|          2|   32|         64|
+    |ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4      |   9|          2|   32|         64|
+    |ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108  |   9|          2|   32|         64|
     |ap_sig_allocacmp_i1_load                    |   9|          2|    7|         14|
     |i1_fu_40                                    |   9|          2|    7|         14|
     |shift_reg_address1_local                    |  14|          3|    7|         21|
@@ -140,10 +140,10 @@
     |ap_loop_exit_ready_pp0_iter2_reg            |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter3_reg            |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter4_reg            |   1|   0|    1|          0|
-    |ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108  |  32|   0|   32|          0|
-    |ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108  |  32|   0|   32|          0|
-    |ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108  |  32|   0|   32|          0|
-    |ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108  |  32|   0|   32|          0|
+    |ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108  |  32|   0|   32|          0|
     |c_load_reg_229                              |   5|   0|    5|          0|
     |i1_fu_40                                    |   7|   0|    7|          0|
     |icmp_ln33_reg_205                           |   1|   0|    1|          0|
@@ -170,7 +170,7 @@
 |ap_done           |  out|    1|  ap_ctrl_hs|  fir_Pipeline_Shift_Accum_Loop|  return value|
 |ap_idle           |  out|    1|  ap_ctrl_hs|  fir_Pipeline_Shift_Accum_Loop|  return value|
 |ap_ready          |  out|    1|  ap_ctrl_hs|  fir_Pipeline_Shift_Accum_Loop|  return value|
-|mul_i_i282        |   in|   32|     ap_none|                     mul_i_i282|        scalar|
+|mul_i_i317        |   in|   32|     ap_none|                     mul_i_i317|        scalar|
 |x                 |   in|   32|     ap_none|                              x|        scalar|
 |acc_1_out         |  out|   32|      ap_vld|                      acc_1_out|       pointer|
 |acc_1_out_ap_vld  |  out|    1|      ap_vld|                      acc_1_out|       pointer|

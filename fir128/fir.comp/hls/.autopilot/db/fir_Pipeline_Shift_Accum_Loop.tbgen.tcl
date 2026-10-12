@@ -18,7 +18,7 @@ set C_modelName {fir_Pipeline_Shift_Accum_Loop}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
 set C_modelArgList {
-	{ mul_i_i282 int 32 regular  }
+	{ mul_i_i317 int 32 regular  }
 	{ x int 32 regular  }
 	{ acc_1_out int 32 regular {pointer 1}  }
 }
@@ -26,7 +26,7 @@ set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "mul_i_i282", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+	{ "Name" : "mul_i_i317", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "x", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "acc_1_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -38,7 +38,7 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ mul_i_i282 sc_in sc_lv 32 signal 0 } 
+	{ mul_i_i317 sc_in sc_lv 32 signal 0 } 
 	{ x sc_in sc_lv 32 signal 1 } 
 	{ acc_1_out sc_out sc_lv 32 signal 2 } 
 	{ acc_1_out_ap_vld sc_out sc_logic 1 outvld 2 } 
@@ -50,7 +50,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "mul_i_i282", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul_i_i282", "role": "default" }} , 
+ 	{ "name": "mul_i_i317", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mul_i_i317", "role": "default" }} , 
  	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "x", "role": "default" }} , 
  	{ "name": "acc_1_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "acc_1_out", "role": "default" }} , 
  	{ "name": "acc_1_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "acc_1_out", "role": "ap_vld" }}  ]}
@@ -71,7 +71,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mul_i_i282", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul_i_i317", "Type" : "None", "Direction" : "I"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "acc_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO"},
@@ -87,7 +87,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	fir_Pipeline_Shift_Accum_Loop {
-		mul_i_i282 {Type I LastRead 0 FirstWrite -1}
+		mul_i_i317 {Type I LastRead 0 FirstWrite -1}
 		x {Type I LastRead 0 FirstWrite -1}
 		acc_1_out {Type O LastRead -1 FirstWrite 4}
 		shift_reg {Type IO LastRead -1 FirstWrite -1}
@@ -105,7 +105,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	mul_i_i282 { ap_none {  { mul_i_i282 in_data 0 32 } } }
+	mul_i_i317 { ap_none {  { mul_i_i317 in_data 0 32 } } }
 	x { ap_none {  { x in_data 0 32 } } }
 	acc_1_out { ap_vld {  { acc_1_out out_data 1 32 }  { acc_1_out_ap_vld out_vld 1 1 } } }
 }

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'
 ================================================================
-* Date:           Mon Oct 12 11:25:49 2026
+* Date:           Mon Oct 12 11:35:41 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -91,7 +91,7 @@ State 1 <SV = 0> <Delay = 6.71>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i1 = alloca i32 1"   --->   Operation 8 'alloca' 'i1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%acc2 = alloca i32 1"   --->   Operation 9 'alloca' 'acc2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 10 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mul_i_i282_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i282"   --->   Operation 11 'read' 'mul_i_i282_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mul_i_i317_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i317"   --->   Operation 11 'read' 'mul_i_i317_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %acc2"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 127, i7 %i1"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.split"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
@@ -129,9 +129,9 @@ ST_4 : Operation 39 [1/2] (6.91ns)   --->   "%mul_ln38 = mul i32 %shift_reg_load
 
 State 5 <SV = 4> <Delay = 5.72>
 ST_5 : Operation 40 [1/1] (1.58ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 40 'br' 'br_ln0' <Predicate = (!icmp_ln33)> <Delay = 1.58>
-ST_5 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%mul_i_i282_pn = phi i32 %mul_i_i282_read, void %if.then, i32 %mul_ln38, void %if.else" [fir.cpp:38]   --->   Operation 41 'phi' 'mul_i_i282_pn' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%mul_i_i317_pn = phi i32 %mul_i_i317_read, void %if.then, i32 %mul_ln38, void %if.else" [fir.cpp:38]   --->   Operation 41 'phi' 'mul_i_i317_pn' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%acc2_load = load i32 %acc2" [fir.cpp:27]   --->   Operation 42 'load' 'acc2_load' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 43 [1/1] (2.55ns) (out node of the LUT)   --->   "%acc = add i32 %mul_i_i282_pn, i32 %acc2_load" [fir.cpp:27]   --->   Operation 43 'add' 'acc' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/1] (2.55ns) (out node of the LUT)   --->   "%acc = add i32 %mul_i_i317_pn, i32 %acc2_load" [fir.cpp:27]   --->   Operation 43 'add' 'acc' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln27 = store i32 %acc, i32 %acc2" [fir.cpp:27]   --->   Operation 44 'store' 'store_ln27' <Predicate = true> <Delay = 1.58>
 ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %acc_1_out, i32 %acc" [fir.cpp:27]   --->   Operation 45 'write' 'write_ln27' <Predicate = (icmp_ln33)> <Delay = 0.00>
 ST_5 : Operation 46 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (icmp_ln33)> <Delay = 1.58>
@@ -148,7 +148,7 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ mul_i_i282]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ mul_i_i317]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ x]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ acc_1_out]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ shift_reg]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=1; MemPort=[02]; IO mode=ap_memory:ce=0
@@ -162,7 +162,7 @@ Port [ c]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0
 i1                     (alloca           ) [ 010000]
 acc2                   (alloca           ) [ 011111]
 x_read                 (read             ) [ 000000]
-mul_i_i282_read        (read             ) [ 011111]
+mul_i_i317_read        (read             ) [ 011111]
 store_ln0              (store            ) [ 000000]
 store_ln0              (store            ) [ 000000]
 br_ln0                 (br               ) [ 000000]
@@ -189,7 +189,7 @@ c_load                 (load             ) [ 010100]
 sext_ln38              (sext             ) [ 010010]
 mul_ln38               (mul              ) [ 010001]
 br_ln0                 (br               ) [ 000000]
-mul_i_i282_pn          (phi              ) [ 010001]
+mul_i_i317_pn          (phi              ) [ 010001]
 acc2_load              (load             ) [ 000000]
 acc                    (add              ) [ 000000]
 store_ln27             (store            ) [ 000000]
@@ -200,12 +200,12 @@ ret_ln0                (ret              ) [ 000000]
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="mul_i_i282">
+<comp id="0" class="1000" name="mul_i_i317">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="mul_i_i282"/></StgValue>
+<StgValue><ssdm name="mul_i_i317"/></StgValue>
 </bind>
 </comp>
 
@@ -416,7 +416,7 @@ ret_ln0                (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="54" class="1004" name="mul_i_i282_read_read_fu_54">
+<comp id="54" class="1004" name="mul_i_i317_read_read_fu_54">
 <pin_list>
 <pin id="55" dir="0" index="0" bw="32" slack="0"/>
 <pin id="56" dir="0" index="1" bw="32" slack="0"/>
@@ -424,7 +424,7 @@ ret_ln0                (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="mul_i_i282_read/1 "/>
+<opset="mul_i_i317_read/1 "/>
 </bind>
 </comp>
 
@@ -510,17 +510,17 @@ ret_ln0                (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="108" class="1005" name="mul_i_i282_pn_reg_108">
+<comp id="108" class="1005" name="mul_i_i317_pn_reg_108">
 <pin_list>
 <pin id="109" dir="0" index="0" bw="32" slack="2147483647"/>
 <pin id="110" dir="1" index="1" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="mul_i_i282_pn (phireg) "/>
+<opset="mul_i_i317_pn (phireg) "/>
 </bind>
 </comp>
 
-<comp id="111" class="1004" name="mul_i_i282_pn_phi_fu_111">
+<comp id="111" class="1004" name="mul_i_i317_pn_phi_fu_111">
 <pin_list>
 <pin id="112" dir="0" index="0" bw="32" slack="4"/>
 <pin id="113" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -530,7 +530,7 @@ ret_ln0                (ret              ) [ 000000]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="mul_i_i282_pn/5 "/>
+<opset="mul_i_i317_pn/5 "/>
 </bind>
 </comp>
 
@@ -717,13 +717,13 @@ ret_ln0                (ret              ) [ 000000]
 </bind>
 </comp>
 
-<comp id="200" class="1005" name="mul_i_i282_read_reg_200">
+<comp id="200" class="1005" name="mul_i_i317_read_reg_200">
 <pin_list>
 <pin id="201" dir="0" index="0" bw="32" slack="4"/>
 <pin id="202" dir="1" index="1" bw="32" slack="4"/>
 </pin_list>
 <bind>
-<opset="mul_i_i282_read "/>
+<opset="mul_i_i317_read "/>
 </bind>
 </comp>
 
@@ -946,7 +946,7 @@ ret_ln0                (ret              ) [ 000000]
 	Port: acc_1_out | {5 }
 	Port: shift_reg | {1 2 }
  - Input state : 
-	Port: fir_Pipeline_Shift_Accum_Loop : mul_i_i282 | {1 }
+	Port: fir_Pipeline_Shift_Accum_Loop : mul_i_i317 | {1 }
 	Port: fir_Pipeline_Shift_Accum_Loop : x | {1 }
 	Port: fir_Pipeline_Shift_Accum_Loop : shift_reg | {1 2 }
 	Port: fir_Pipeline_Shift_Accum_Loop : c | {1 2 }
@@ -973,7 +973,7 @@ ret_ln0                (ret              ) [ 000000]
 		mul_ln38 : 1
 	State 4
 	State 5
-		mul_i_i282_pn : 1
+		mul_i_i317_pn : 1
 		acc : 2
 		store_ln27 : 3
 		write_ln27 : 3
@@ -996,7 +996,7 @@ ret_ln0                (ret              ) [ 000000]
 |   icmp   |      icmp_ln33_fu_130      |    0    |    0    |    14   |
 |----------|----------------------------|---------|---------|---------|
 |   read   |      x_read_read_fu_48     |    0    |    0    |    0    |
-|          | mul_i_i282_read_read_fu_54 |    0    |    0    |    0    |
+|          | mul_i_i317_read_read_fu_54 |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|
 |   write  |   write_ln27_write_fu_60   |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|
@@ -1020,8 +1020,8 @@ N/A
 |     c_load_reg_229    |    5   |
 |       i1_reg_186      |    7   |
 |   icmp_ln33_reg_205   |    1   |
-| mul_i_i282_pn_reg_108 |   32   |
-|mul_i_i282_read_reg_200|   32   |
+| mul_i_i317_pn_reg_108 |   32   |
+|mul_i_i317_read_reg_200|   32   |
 |    mul_ln38_reg_239   |   32   |
 |   sext_ln38_reg_234   |   32   |
 | shift_reg_addr_reg_209|    7   |

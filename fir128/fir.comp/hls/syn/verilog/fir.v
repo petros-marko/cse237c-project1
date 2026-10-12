@@ -42,8 +42,8 @@ reg y_ap_vld;
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg   [31:0] x_read_reg_88;
-wire   [31:0] mul_i_i282_fu_77_p2;
-reg   [31:0] mul_i_i282_reg_99;
+wire   [31:0] mul_i_i317_fu_77_p2;
+reg   [31:0] mul_i_i317_reg_99;
 wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start;
 wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done;
 wire    grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle;
@@ -75,7 +75,7 @@ fir_fir_Pipeline_Shift_Accum_Loop grp_fir_Pipeline_Shift_Accum_Loop_fu_53(
     .ap_done(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done),
     .ap_idle(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle),
     .ap_ready(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready),
-    .mul_i_i282(mul_i_i282_reg_99),
+    .mul_i_i317(mul_i_i317_reg_99),
     .x(x_read_reg_88),
     .acc_1_out(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out),
     .acc_1_out_ap_vld(grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld)
@@ -109,7 +109,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        mul_i_i282_reg_99 <= mul_i_i282_fu_77_p2;
+        mul_i_i317_reg_99 <= mul_i_i317_fu_77_p2;
         x_read_reg_88 <= x;
     end
 end
@@ -201,7 +201,7 @@ assign empty_fu_65_p2 = x << 32'd3;
 
 assign grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start = grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg;
 
-assign mul_i_i282_fu_77_p2 = (empty_fu_65_p2 + empty_5_fu_71_p2);
+assign mul_i_i317_fu_77_p2 = (empty_fu_65_p2 + empty_5_fu_71_p2);
 
 assign y = acc_1_loc_fu_36;
 

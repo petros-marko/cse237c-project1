@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'" level="0">
-<item name = "Date">Mon Oct 12 11:25:49 2026
+<item name = "Date">Mon Oct 12 11:35:41 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -95,8 +95,8 @@
 <column name="acc2_fu_44">9, 2, 32, 64</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_loop_exit_ready_pp0_iter4_reg">9, 2, 1, 2</column>
-<column name="ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4">9, 2, 32, 64</column>
-<column name="ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108">9, 2, 32, 64</column>
+<column name="ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4">9, 2, 32, 64</column>
+<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108">9, 2, 32, 64</column>
 <column name="ap_sig_allocacmp_i1_load">9, 2, 7, 14</column>
 <column name="i1_fu_40">9, 2, 7, 14</column>
 <column name="shift_reg_address1_local">14, 3, 7, 21</column>
@@ -115,10 +115,10 @@
 <column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
-<column name="ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108">32, 0, 32, 0</column>
-<column name="ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108">32, 0, 32, 0</column>
 <column name="c_load_reg_229">5, 0, 5, 0</column>
 <column name="i1_fu_40">7, 0, 7, 0</column>
 <column name="icmp_ln33_reg_205">1, 0, 1, 0</column>
@@ -141,7 +141,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, fir_Pipeline_Shift_Accum_Loop, return value</column>
-<column name="mul_i_i282">in, 32, ap_none, mul_i_i282, scalar</column>
+<column name="mul_i_i317">in, 32, ap_none, mul_i_i317, scalar</column>
 <column name="x">in, 32, ap_none, x, scalar</column>
 <column name="acc_1_out">out, 32, ap_vld, acc_1_out, pointer</column>
 <column name="acc_1_out_ap_vld">out, 1, ap_vld, acc_1_out, pointer</column>

@@ -90,7 +90,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mul_i_i282", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul_i_i317", "Type" : "None", "Direction" : "I"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "acc_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO"},
@@ -111,7 +111,7 @@ set ArgLastReadFirstWriteLatency {
 		shift_reg {Type IO LastRead -1 FirstWrite -1}
 		c {Type I LastRead -1 FirstWrite -1}}
 	fir_Pipeline_Shift_Accum_Loop {
-		mul_i_i282 {Type I LastRead 0 FirstWrite -1}
+		mul_i_i317 {Type I LastRead 0 FirstWrite -1}
 		x {Type I LastRead 0 FirstWrite -1}
 		acc_1_out {Type O LastRead -1 FirstWrite 4}
 		shift_reg {Type IO LastRead -1 FirstWrite -1}

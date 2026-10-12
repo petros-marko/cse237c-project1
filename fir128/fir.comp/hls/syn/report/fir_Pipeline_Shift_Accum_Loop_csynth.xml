@@ -143,8 +143,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul_i_i282</name>
-<Object>mul_i_i282</Object>
+<name>mul_i_i317</name>
+<Object>mul_i_i317</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>mul_i_i282</name>
+						<name>mul_i_i317</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -255,7 +255,7 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>mul_i_i282_read</name>
+						<name>mul_i_i317_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -1378,7 +1378,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>mul_i_i282_pn</name>
+						<name>mul_i_i317_pn</name>
 						<fileName>fir.cpp</fileName>
 						<fileDirectory>/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128</fileDirectory>
 						<lineNumber>38</lineNumber>

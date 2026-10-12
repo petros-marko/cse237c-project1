@@ -27,14 +27,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 5 \
-    name mul_i_i282 \
+    name mul_i_i317 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul_i_i282 \
+    corename dc_mul_i_i317 \
     op interface \
-    ports { mul_i_i282 { I 32 vector } } \
+    ports { mul_i_i317 { I 32 vector } } \
 } "
 }
 

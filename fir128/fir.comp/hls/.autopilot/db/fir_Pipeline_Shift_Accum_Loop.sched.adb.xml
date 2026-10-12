@@ -88,10 +88,10 @@ newFuncRoot:2 %x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-newFuncRoot:3 %mul_i_i282_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i282
+newFuncRoot:3 %mul_i_i317_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i317
 
 ]]></Node>
-<StgValue><ssdm name="mul_i_i282_read"/></StgValue>
+<StgValue><ssdm name="mul_i_i317_read"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -567,10 +567,10 @@ if.else:11 %br_ln0 = br void %for.inc
 
 <Node id="37" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-for.inc:0 %mul_i_i282_pn = phi i32 %mul_i_i282_read, void %if.then, i32 %mul_ln38, void %if.else
+for.inc:0 %mul_i_i317_pn = phi i32 %mul_i_i317_read, void %if.then, i32 %mul_ln38, void %if.else
 
 ]]></Node>
-<StgValue><ssdm name="mul_i_i282_pn"/></StgValue>
+<StgValue><ssdm name="mul_i_i317_pn"/></StgValue>
 </operation>
 
 <operation id="42" st_id="5" stage="1" lat="1">
@@ -597,7 +597,7 @@ for.inc:1 %acc2_load = load i32 %acc2
 
 <Node id="39" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.inc:2 %acc = add i32 %mul_i_i282_pn, i32 %acc2_load
+for.inc:2 %acc = add i32 %mul_i_i317_pn, i32 %acc2_load
 
 ]]></Node>
 <StgValue><ssdm name="acc"/></StgValue>

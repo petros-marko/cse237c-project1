@@ -166,7 +166,7 @@
                     <BindInstances>icmp_ln33_fu_130_p2 add_ln37_fu_136_p2 mul_32s_5s_32_2_1_U1 acc_fu_174_p2 i_fu_152_p2 shift_reg_U c_U</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_i_i282_fu_77_p2</BindInstances>
+            <BindInstances>mul_i_i317_fu_77_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -291,7 +291,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_i_i282_fu_77_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_i_i282" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mul_i_i317_fu_77_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_i_i317" VISIBLE="true"/>
             </BindNodes>
         </Module>
     </ModuleInformation>

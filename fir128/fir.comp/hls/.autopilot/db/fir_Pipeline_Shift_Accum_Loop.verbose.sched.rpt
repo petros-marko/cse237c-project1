@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir_Pipeline_Shift_Accum_Loop'
 ================================================================
-* Date:           Mon Oct 12 11:25:49 2026
+* Date:           Mon Oct 12 11:35:41 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -91,7 +91,7 @@ State 1 <SV = 0> <Delay = 6.71>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i1 = alloca i32 1"   --->   Operation 8 'alloca' 'i1' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%acc2 = alloca i32 1"   --->   Operation 9 'alloca' 'acc2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 10 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mul_i_i282_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i282"   --->   Operation 11 'read' 'mul_i_i282_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%mul_i_i317_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %mul_i_i317"   --->   Operation 11 'read' 'mul_i_i317_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %acc2"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 127, i7 %i1"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.split"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
@@ -129,9 +129,9 @@ ST_4 : Operation 39 [1/2] (6.91ns)   --->   "%mul_ln38 = mul i32 %shift_reg_load
 
 State 5 <SV = 4> <Delay = 5.72>
 ST_5 : Operation 40 [1/1] (1.58ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 40 'br' 'br_ln0' <Predicate = (!icmp_ln33)> <Delay = 1.58>
-ST_5 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%mul_i_i282_pn = phi i32 %mul_i_i282_read, void %if.then, i32 %mul_ln38, void %if.else" [fir.cpp:38]   --->   Operation 41 'phi' 'mul_i_i282_pn' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node acc)   --->   "%mul_i_i317_pn = phi i32 %mul_i_i317_read, void %if.then, i32 %mul_ln38, void %if.else" [fir.cpp:38]   --->   Operation 41 'phi' 'mul_i_i317_pn' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%acc2_load = load i32 %acc2" [fir.cpp:27]   --->   Operation 42 'load' 'acc2_load' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 43 [1/1] (2.55ns) (out node of the LUT)   --->   "%acc = add i32 %mul_i_i282_pn, i32 %acc2_load" [fir.cpp:27]   --->   Operation 43 'add' 'acc' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 43 [1/1] (2.55ns) (out node of the LUT)   --->   "%acc = add i32 %mul_i_i317_pn, i32 %acc2_load" [fir.cpp:27]   --->   Operation 43 'add' 'acc' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln27 = store i32 %acc, i32 %acc2" [fir.cpp:27]   --->   Operation 44 'store' 'store_ln27' <Predicate = true> <Delay = 1.58>
 ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %acc_1_out, i32 %acc" [fir.cpp:27]   --->   Operation 45 'write' 'write_ln27' <Predicate = (icmp_ln33)> <Delay = 0.00>
 ST_5 : Operation 46 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (icmp_ln33)> <Delay = 1.58>
@@ -165,8 +165,8 @@ The critical path consists of the following:
 
  <State 5>: 5.728ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation 32 bit ('mul_i_i282_pn', fir.cpp:38) with incoming values : ('mul_i_i282_read') ('mul_ln38', fir.cpp:38) [37]  (1.588 ns)
-	'phi' operation 32 bit ('mul_i_i282_pn', fir.cpp:38) with incoming values : ('mul_i_i282_read') ('mul_ln38', fir.cpp:38) [37]  (0.000 ns)
+	multiplexor before 'phi' operation 32 bit ('mul_i_i317_pn', fir.cpp:38) with incoming values : ('mul_i_i317_read') ('mul_ln38', fir.cpp:38) [37]  (1.588 ns)
+	'phi' operation 32 bit ('mul_i_i317_pn', fir.cpp:38) with incoming values : ('mul_i_i317_read') ('mul_ln38', fir.cpp:38) [37]  (0.000 ns)
 	'add' operation 32 bit ('acc', fir.cpp:27) [39]  (2.552 ns)
 	'store' operation 0 bit ('store_ln27', fir.cpp:27) of variable 'acc', fir.cpp:27 on local variable 'acc2' [41]  (1.588 ns)
 

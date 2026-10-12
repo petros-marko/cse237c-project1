@@ -13,7 +13,7 @@ module fir_fir_Pipeline_Shift_Accum_Loop (
         ap_done,
         ap_idle,
         ap_ready,
-        mul_i_i282,
+        mul_i_i317,
         x,
         acc_1_out,
         acc_1_out_ap_vld
@@ -27,7 +27,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [31:0] mul_i_i282;
+input  [31:0] mul_i_i317;
 input  [31:0] x;
 output  [31:0] acc_1_out;
 output   acc_1_out_ap_vld;
@@ -63,12 +63,12 @@ reg  signed [31:0] shift_reg_load_reg_224;
 reg  signed [4:0] c_load_reg_229;
 wire   [31:0] grp_fu_166_p2;
 reg   [31:0] mul_ln38_reg_239;
-reg   [31:0] ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4;
-wire   [31:0] ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108;
-reg   [31:0] ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108;
-reg   [31:0] ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108;
-reg   [31:0] ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108;
-reg   [31:0] ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108;
+reg   [31:0] ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4;
+wire   [31:0] ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108;
+reg   [31:0] ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108;
+reg   [31:0] ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108;
+reg   [31:0] ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108;
+reg   [31:0] ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108;
 wire   [63:0] zext_ln37_fu_142_p1;
 wire    ap_block_pp0_stage0;
 reg   [6:0] i1_fu_40;
@@ -254,9 +254,9 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_condition_118)) begin
         if ((icmp_ln33_fu_130_p2 == 1'd1)) begin
-            ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108 <= mul_i_i282;
+            ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108 <= mul_i_i317;
         end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108;
+            ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108;
         end
     end
 end
@@ -293,20 +293,20 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter1_mul_i_i282_pn_reg_108;
+        ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter1_mul_i_i317_pn_reg_108;
         shift_reg_load_reg_224 <= shift_reg_q1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
-        ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter2_mul_i_i282_pn_reg_108;
+        ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter2_mul_i_i317_pn_reg_108;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter3 == 1'b1))) begin
-        ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108 <= ap_phi_reg_pp0_iter3_mul_i_i282_pn_reg_108;
+        ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108 <= ap_phi_reg_pp0_iter3_mul_i_i317_pn_reg_108;
     end
 end
 
@@ -352,9 +352,9 @@ end
 
 always @ (*) begin
     if ((icmp_ln33_reg_205_pp0_iter3_reg == 1'd0)) begin
-        ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 = mul_ln38_reg_239;
+        ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 = mul_ln38_reg_239;
     end else begin
-        ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 = ap_phi_reg_pp0_iter4_mul_i_i282_pn_reg_108;
+        ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 = ap_phi_reg_pp0_iter4_mul_i_i317_pn_reg_108;
     end
 end
 
@@ -439,9 +439,9 @@ always @ (*) begin
     endcase
 end
 
-assign acc_1_out = (ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 + acc2_fu_44);
+assign acc_1_out = (ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 + acc2_fu_44);
 
-assign acc_fu_174_p2 = (ap_phi_mux_mul_i_i282_pn_phi_fu_111_p4 + acc2_fu_44);
+assign acc_fu_174_p2 = (ap_phi_mux_mul_i_i317_pn_phi_fu_111_p4 + acc2_fu_44);
 
 assign add_ln37_fu_136_p2 = ($signed(ap_sig_allocacmp_i1_load) + $signed(7'd127));
 
@@ -471,7 +471,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign ap_phi_reg_pp0_iter0_mul_i_i282_pn_reg_108 = 'bx;
+assign ap_phi_reg_pp0_iter0_mul_i_i317_pn_reg_108 = 'bx;
 
 assign ap_ready = ap_ready_sig;
 

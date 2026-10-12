@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Mon Oct 12 11:25:49 2026
+* Date:           Mon Oct 12 11:35:41 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -91,7 +91,7 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |mul_i_i282_fu_77_p2  |         +|   0|  0|  39|          32|          32|
+    |mul_i_i317_fu_77_p2  |         +|   0|  0|  39|          32|          32|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  39|          32|          32|
     +---------------------+----------+----+---+----+------------+------------+
@@ -112,7 +112,7 @@
     |acc_1_loc_fu_36                                       |  32|   0|   32|          0|
     |ap_CS_fsm                                             |   3|   0|    3|          0|
     |grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg  |   1|   0|    1|          0|
-    |mul_i_i282_reg_99                                     |  32|   0|   32|          0|
+    |mul_i_i317_reg_99                                     |  32|   0|   32|          0|
     |x_read_reg_88                                         |  32|   0|   32|          0|
     +------------------------------------------------------+----+----+-----+-----------+
     |Total                                                 | 100|   0|  100|          0|
@@ -178,13 +178,13 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 5.80>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 4 'read' 'x_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%acc_1_loc = alloca i64 1"   --->   Operation 5 'alloca' 'acc_1_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i282)   --->   "%empty = shl i32 %x_read, i32 3"   --->   Operation 6 'shl' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i282)   --->   "%empty_5 = shl i32 %x_read, i32 1"   --->   Operation 7 'shl' 'empty_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (2.55ns) (out node of the LUT)   --->   "%mul_i_i282 = add i32 %empty, i32 %empty_5"   --->   Operation 8 'add' 'mul_i_i282' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 9 [2/2] (3.25ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i317)   --->   "%empty = shl i32 %x_read, i32 3"   --->   Operation 6 'shl' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node mul_i_i317)   --->   "%empty_5 = shl i32 %x_read, i32 1"   --->   Operation 7 'shl' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.55ns) (out node of the LUT)   --->   "%mul_i_i317 = add i32 %empty, i32 %empty_5"   --->   Operation 8 'add' 'mul_i_i317' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [2/2] (3.25ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
 
 State 2 <SV = 1> <Delay = 4.14>
-ST_2 : Operation 10 [1/2] (4.14ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 10 [1/2] (4.14ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i317, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Generic Core
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [fir.cpp:16]   --->   Operation 11 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
@@ -222,7 +222,7 @@ x_read             (read         ) [ 0010]
 acc_1_loc          (alloca       ) [ 0111]
 empty              (shl          ) [ 0000]
 empty_5            (shl          ) [ 0000]
-mul_i_i282         (add          ) [ 0010]
+mul_i_i317         (add          ) [ 0010]
 call_ln0           (call         ) [ 0000]
 spectopmodule_ln16 (spectopmodule) [ 0000]
 specbitsmap_ln0    (specbitsmap  ) [ 0000]
@@ -477,7 +477,7 @@ ret_ln55           (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="77" class="1004" name="mul_i_i282_fu_77">
+<comp id="77" class="1004" name="mul_i_i317_fu_77">
 <pin_list>
 <pin id="78" dir="0" index="0" bw="32" slack="0"/>
 <pin id="79" dir="0" index="1" bw="32" slack="0"/>
@@ -485,7 +485,7 @@ ret_ln55           (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="mul_i_i282/1 "/>
+<opset="mul_i_i317/1 "/>
 </bind>
 </comp>
 
@@ -520,13 +520,13 @@ ret_ln55           (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="99" class="1005" name="mul_i_i282_reg_99">
+<comp id="99" class="1005" name="mul_i_i317_reg_99">
 <pin_list>
 <pin id="100" dir="0" index="0" bw="32" slack="1"/>
 <pin id="101" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="mul_i_i282 "/>
+<opset="mul_i_i317 "/>
 </bind>
 </comp>
 
@@ -612,7 +612,7 @@ ret_ln55           (ret          ) [ 0000]
 |----------|-----------------------------------------|---------|---------|---------|---------|
 |   call   | grp_fir_Pipeline_Shift_Accum_Loop_fu_53 |    2    |  4.8833 |   448   |   163   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|    add   |             mul_i_i282_fu_77            |    0    |    0    |    0    |    39   |
+|    add   |             mul_i_i317_fu_77            |    0    |    0    |    0    |    39   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
 |   read   |            x_read_read_fu_40            |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|---------|---------|
@@ -639,7 +639,7 @@ Memories:
 |                 |   FF   |
 +-----------------+--------+
 | acc_1_loc_reg_93|   32   |
-|mul_i_i282_reg_99|   32   |
+|mul_i_i317_reg_99|   32   |
 |  x_read_reg_88  |   32   |
 +-----------------+--------+
 |      Total      |   96   |

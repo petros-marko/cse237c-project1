@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'fir'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 12 11:25:49 2026
+    * Date:           Mon Oct 12 11:35:41 2026
     * Version:        2024.2 (Build 5238294 on Nov  8 2024)
     * Project:        fir.comp
     * Solution:       hls (Vivado IP Flow Target)
@@ -74,7 +74,7 @@
 | Name                             | DSP | Pragma | Variable   | Op    | Impl   | Latency |
 +----------------------------------+-----+--------+------------+-------+--------+---------+
 | + fir                            | 2   |        |            |       |        |         |
-|   mul_i_i282_fu_77_p2            |     |        | mul_i_i282 | add   | fabric | 0       |
+|   mul_i_i317_fu_77_p2            |     |        | mul_i_i317 | add   | fabric | 0       |
 |  + fir_Pipeline_Shift_Accum_Loop | 2   |        |            |       |        |         |
 |    icmp_ln33_fu_130_p2           |     |        | icmp_ln33  | seteq | auto   | 0       |
 |    add_ln37_fu_136_p2            |     |        | add_ln37   | add   | fabric | 0       |
