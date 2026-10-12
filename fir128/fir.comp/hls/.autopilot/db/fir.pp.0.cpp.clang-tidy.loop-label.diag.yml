@@ -37,4 +37,13 @@ Diagnostics:
         Offset:          566185
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_49_1:  '
+    FileOffset:      49
+    FilePath:        fir.cpp
+    Replacements:    
+      - FilePath:        /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/.autopilot/db/fir.pp.0.cpp
+        Offset:          935476
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_49_1: '
 ...

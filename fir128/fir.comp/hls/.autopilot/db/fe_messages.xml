@@ -2,8 +2,5 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.tcl:9:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir.cpp:47:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
 </xilinx:hls_fe_msgs>
 

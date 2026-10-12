@@ -4,7 +4,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // ==============================================================
 `timescale 1 ns / 1 ps
-module fir_c_ROM_AUTO_1R (
+module fir_fir_Pipeline_VITIS_LOOP_49_1_c_ROM_AUTO_1R (
     address0, ce0, q0, 
     reset, clk);
 
@@ -25,7 +25,7 @@ reg [DataWidth-1:0] rom0[0:AddressRange-1];
 
 initial begin
      
-    $readmemh("./fir_c_ROM_AUTO_1R.dat", rom0);
+    $readmemh("./fir_fir_Pipeline_VITIS_LOOP_49_1_c_ROM_AUTO_1R.dat", rom0);
 end
 
   
