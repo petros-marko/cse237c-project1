@@ -46,13 +46,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>fir.cpp:31</SourceLocation>
+<SourceLocation>fir.cpp:32</SourceLocation>
 <SummaryOfLoopViolations>
 <Shift_Accum_Loop>
 <Name>Shift_Accum_Loop</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>fir.cpp:31</SourceLocation>
+<SourceLocation>fir.cpp:32</SourceLocation>
 </Shift_Accum_Loop>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
@@ -60,10 +60,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>3</BRAM_18K>
+<BRAM_18K>2</BRAM_18K>
 <DSP>2</DSP>
-<FF>510</FF>
-<LUT>246</LUT>
+<FF>488</FF>
+<LUT>256</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -143,8 +143,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>mul</name>
-<Object>mul</Object>
+<name>mul_i_i282</name>
+<Object>mul_i_i282</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

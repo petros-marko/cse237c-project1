@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set name fir_mul_6s_32s_32_2_1
+set name fir_mul_32s_5s_32_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
@@ -12,7 +12,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler fir_fir_Pipeline_Shift_Accum_Loop_fir_int_int_c_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler fir_fir_Pipeline_Shift_Accum_Loop_c_ROM_AUTO_1R BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -27,14 +27,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 5 \
-    name mul \
+    name mul_i_i282 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul \
+    corename dc_mul_i_i282 \
     op interface \
-    ports { mul { I 32 vector } } \
+    ports { mul_i_i282 { I 32 vector } } \
 } "
 }
 

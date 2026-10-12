@@ -11,6 +11,7 @@
 */
 
 #include "fir.h"
+#include "ap_int.h"
 
 void fir (
   data_t *y,

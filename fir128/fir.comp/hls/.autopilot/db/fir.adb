@@ -263,7 +263,7 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>mul</name>
+              <name>mul_i_i282</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -274,7 +274,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>mul_fu_77_p2</rtlName>
+              <rtlName>mul_i_i282_fu_77_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -396,10 +396,10 @@
             <Obj>
               <type>0</type>
               <id>17</id>
-              <name>y_write_ln40</name>
+              <name>y_write_ln41</name>
               <fileName>fir.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
-              <lineNumber>40</lineNumber>
+              <lineNumber>41</lineNumber>
               <contextFuncName>fir</contextFuncName>
               <contextNormFuncName>fir</contextNormFuncName>
               <inlineStackInfo>
@@ -415,7 +415,7 @@
                         <first>fir.cpp</first>
                         <second>fir</second>
                       </first>
-                      <second>40</second>
+                      <second>41</second>
                     </item>
                   </second>
                 </item>
@@ -454,10 +454,10 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>_ln54</name>
+              <name>_ln55</name>
               <fileName>fir.cpp</fileName>
               <fileDirectory>../.</fileDirectory>
-              <lineNumber>54</lineNumber>
+              <lineNumber>55</lineNumber>
               <contextFuncName>fir</contextFuncName>
               <contextNormFuncName>fir</contextNormFuncName>
               <inlineStackInfo>
@@ -473,7 +473,7 @@
                         <first>fir.cpp</first>
                         <second>fir</second>
                       </first>
-                      <second>54</second>
+                      <second>55</second>
                     </item>
                   </second>
                 </item>
@@ -981,7 +981,7 @@
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
               <first>BRAM</first>
-              <second>3</second>
+              <second>2</second>
             </item>
             <item>
               <first>DSP</first>
@@ -989,11 +989,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>510</second>
+              <second>488</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>246</second>
+              <second>256</second>
             </item>
             <item>
               <first>URAM</first>
@@ -1006,7 +1006,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item>
-          <first>mul_fu_77_p2 ( + ) </first>
+          <first>mul_i_i282_fu_77_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1129,7 +1129,7 @@
           </second>
         </item>
         <item>
-          <first>mul_reg_99</first>
+          <first>mul_i_i282_reg_99</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1194,7 +1194,7 @@
         <count>1</count>
         <item_version>0</item_version>
         <item>
-          <first>mul_fu_77_p2 ( + ) </first>
+          <first>mul_i_i282_fu_77_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -1390,7 +1390,7 @@
         </second>
       </item>
       <item>
-        <first>mul_fu_77</first>
+        <first>mul_i_i282_fu_77</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1423,7 +1423,7 @@
         </second>
       </item>
       <item>
-        <first>write_ln40_write_fu_46</first>
+        <first>write_ln41_write_fu_46</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -1448,7 +1448,7 @@
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
         <first class_id="55" tracking_level="0" version="0">
-          <first>fir_int_int_c</first>
+          <first>c</first>
           <second>100</second>
         </first>
         <second>
@@ -1509,7 +1509,7 @@
         </second>
       </item>
       <item>
-        <first>mul_reg_99</first>
+        <first>mul_i_i282_reg_99</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

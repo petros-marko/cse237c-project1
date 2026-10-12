@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730686",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533564",
  "buildStep": {
-  "cmdId": "1fa690a0-34e2-4d66-b042-9f866c61e982",
+  "cmdId": "829b0556-8fe1-44d3-840b-603f696fbca6",
   "name": "vitis-run",
   "logFile": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/logs/hls_compile.log",
   "commandLine": "vitis-run --mode hls --tcl /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.tcl",
@@ -25,10 +25,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730688",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533565",
  "status": {
-  "cmdId": "1fa690a0-34e2-4d66-b042-9f866c61e982",
+  "cmdId": "829b0556-8fe1-44d3-840b-603f696fbca6",
   "state": "CS_RUNNING"
  }
 }
@@ -36,8 +36,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730688",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533565",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -72,10 +72,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730689",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533566",
  "buildStep": {
-  "cmdId": "f31f39d1-9357-48d1-983d-8649b5cc0f48",
+  "cmdId": "72c5630e-f474-484d-96ef-45910aed8814",
   "name": "csynth_design",
   "logFile": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/hls.log",
   "commandLine": "csynth_design",
@@ -88,10 +88,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730690",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533567",
  "status": {
-  "cmdId": "f31f39d1-9357-48d1-983d-8649b5cc0f48",
+  "cmdId": "72c5630e-f474-484d-96ef-45910aed8814",
   "state": "CS_RUNNING"
  }
 }
@@ -99,8 +99,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730691",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533567",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/hls_data.json",
   "name": "",
@@ -113,8 +113,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730692",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533567",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth.rpt",
   "name": "",
@@ -127,8 +127,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:10 2026",
- "timestampMillis": "1791828730693",
+ "dateTimestamp": "Mon Oct 12 11:25:33 2026",
+ "timestampMillis": "1791829533568",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls/syn/report/csynth.xml",
   "name": "",
@@ -141,8 +141,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:23 2026",
- "timestampMillis": "1791828743396",
+ "dateTimestamp": "Mon Oct 12 11:25:50 2026",
+ "timestampMillis": "1791829550827",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls",
   "name": "",
@@ -155,8 +155,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:23 2026",
- "timestampMillis": "1791828743397",
+ "dateTimestamp": "Mon Oct 12 11:25:50 2026",
+ "timestampMillis": "1791829550827",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls",
   "name": "",
@@ -169,8 +169,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Oct 12 11:12:23 2026",
- "timestampMillis": "1791828743397",
+ "dateTimestamp": "Mon Oct 12 11:25:50 2026",
+ "timestampMillis": "1791829550828",
  "report": {
   "path": "/home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.comp/hls",
   "name": "",
@@ -183,10 +183,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Oct 12 11:12:23 2026",
- "timestampMillis": "1791828743398",
+ "dateTimestamp": "Mon Oct 12 11:25:50 2026",
+ "timestampMillis": "1791829550829",
  "status": {
-  "cmdId": "f31f39d1-9357-48d1-983d-8649b5cc0f48",
+  "cmdId": "72c5630e-f474-484d-96ef-45910aed8814",
   "state": "CS_PASSED"
  }
 }
@@ -194,10 +194,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Oct 12 11:12:23 2026",
- "timestampMillis": "1791828743416",
+ "dateTimestamp": "Mon Oct 12 11:25:50 2026",
+ "timestampMillis": "1791829550845",
  "status": {
-  "cmdId": "1fa690a0-34e2-4d66-b042-9f866c61e982",
+  "cmdId": "829b0556-8fe1-44d3-840b-603f696fbca6",
   "state": "CS_PASSED"
  }
 }

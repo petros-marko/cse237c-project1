@@ -72,9 +72,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1", "SubInstance" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_53", "Port" : "shift_reg", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
-			{"Name" : "fir_int_int_c", "Type" : "Memory", "Direction" : "I",
+			{"Name" : "c", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_53", "Port" : "fir_int_int_c", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
+					{"ID" : "1", "SubInstance" : "grp_fir_Pipeline_Shift_Accum_Loop_fu_53", "Port" : "c", "Inst_start_state" : "1", "Inst_end_state" : "2"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53", "Parent" : "0", "Child" : ["2", "3", "4", "5"],
 		"CDFG" : "fir_Pipeline_Shift_Accum_Loop",
 		"Protocol" : "ap_ctrl_hs",
@@ -90,17 +90,17 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "mul", "Type" : "None", "Direction" : "I"},
+			{"Name" : "mul_i_i282", "Type" : "None", "Direction" : "I"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
 			{"Name" : "acc_1_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "fir_int_int_c", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "c", "Type" : "Memory", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "Shift_Accum_Loop", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter4", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter4", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.shift_reg_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.fir_int_int_c_U", "Parent" : "1"},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.mul_6s_32s_32_2_1_U1", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.c_U", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.mul_32s_5s_32_2_1_U1", "Parent" : "1"},
 	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_fir_Pipeline_Shift_Accum_Loop_fu_53.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
@@ -109,13 +109,13 @@ set ArgLastReadFirstWriteLatency {
 		y {Type O LastRead -1 FirstWrite 2}
 		x {Type I LastRead 0 FirstWrite -1}
 		shift_reg {Type IO LastRead -1 FirstWrite -1}
-		fir_int_int_c {Type I LastRead -1 FirstWrite -1}}
+		c {Type I LastRead -1 FirstWrite -1}}
 	fir_Pipeline_Shift_Accum_Loop {
-		mul {Type I LastRead 0 FirstWrite -1}
+		mul_i_i282 {Type I LastRead 0 FirstWrite -1}
 		x {Type I LastRead 0 FirstWrite -1}
 		acc_1_out {Type O LastRead -1 FirstWrite 4}
 		shift_reg {Type IO LastRead -1 FirstWrite -1}
-		fir_int_int_c {Type I LastRead -1 FirstWrite -1}}}
+		c {Type I LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

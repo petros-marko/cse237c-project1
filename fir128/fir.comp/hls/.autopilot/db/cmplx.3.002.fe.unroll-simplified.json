@@ -3,8 +3,8 @@
     "basicblocks": 6,
     "calls": "",
     "file": "fir.cpp",
-    "fileloc": 15,
-    "instructions": 27,
+    "fileloc": 16,
+    "instructions": 28,
     "loads": {
       "G": 2
     },
@@ -13,6 +13,6 @@
       "G": 2,
       "T": 1
     },
-    "total_instructions": 27
+    "total_instructions": 28
   }
 }

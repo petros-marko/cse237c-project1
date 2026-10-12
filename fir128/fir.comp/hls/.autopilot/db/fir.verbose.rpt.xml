@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Mon Oct 12 11:12:22 2026
+<item name = "Date">Mon Oct 12 11:25:49 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -50,19 +50,19 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 39, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">3, 2, 510, 246, 0</column>
+<column name="Instance">2, 2, 488, 256, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 20, -</column>
 <column name="Register">-, -, 100, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">1, ~0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_53">fir_Pipeline_Shift_Accum_Loop, 3, 2, 510, 246, 0</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_53">fir_Pipeline_Shift_Accum_Loop, 2, 2, 488, 256, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -79,7 +79,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="mul_fu_77_p2">+, 0, 0, 39, 32, 32</column>
+<column name="mul_i_i282_fu_77_p2">+, 0, 0, 39, 32, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -92,7 +92,7 @@
 <column name="acc_1_loc_fu_36">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_reg_99">32, 0, 32, 0</column>
+<column name="mul_i_i282_reg_99">32, 0, 32, 0</column>
 <column name="x_read_reg_88">32, 0, 32, 0</column>
 </table>
 </item>

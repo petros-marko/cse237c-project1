@@ -2,7 +2,7 @@
 
 `timescale 1 ns / 1 ps
 
- module fir_mul_6s_32s_32_2_1(clk,ce,reset,din0, din1, dout);
+ module fir_mul_32s_5s_32_2_1(clk,ce,reset,din0, din1, dout);
 parameter ID = 1;
 parameter NUM_STAGE = 0;
 parameter din0_WIDTH = 14;

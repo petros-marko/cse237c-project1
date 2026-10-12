@@ -25,7 +25,7 @@ end;
 architecture behav of fir is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=135,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=610,HLS_SYN_LUT=305,HLS_VERSION=2024_2}";
+    "fir_fir,hls_ip_2024_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.912000,HLS_SYN_LAT=135,HLS_SYN_TPT=none,HLS_SYN_MEM=2,HLS_SYN_DSP=0,HLS_SYN_FF=588,HLS_SYN_LUT=315,HLS_VERSION=2024_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (2 downto 0) := "001";
@@ -43,8 +43,8 @@ architecture behav of fir is
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal x_read_reg_88 : STD_LOGIC_VECTOR (31 downto 0);
-    signal mul_fu_77_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal mul_reg_99 : STD_LOGIC_VECTOR (31 downto 0);
+    signal mul_i_i282_fu_77_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal mul_i_i282_reg_99 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start : STD_LOGIC;
     signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done : STD_LOGIC;
     signal grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle : STD_LOGIC;
@@ -73,7 +73,7 @@ architecture behav of fir is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        mul : IN STD_LOGIC_VECTOR (31 downto 0);
+        mul_i_i282 : IN STD_LOGIC_VECTOR (31 downto 0);
         x : IN STD_LOGIC_VECTOR (31 downto 0);
         acc_1_out : OUT STD_LOGIC_VECTOR (31 downto 0);
         acc_1_out_ap_vld : OUT STD_LOGIC );
@@ -90,7 +90,7 @@ begin
         ap_done => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_done,
         ap_idle => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_idle,
         ap_ready => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_ready,
-        mul => mul_reg_99,
+        mul_i_i282 => mul_i_i282_reg_99,
         x => x_read_reg_88,
         acc_1_out => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out,
         acc_1_out_ap_vld => grp_fir_Pipeline_Shift_Accum_Loop_fu_53_acc_1_out_ap_vld);
@@ -138,7 +138,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                mul_reg_99 <= mul_fu_77_p2;
+                mul_i_i282_reg_99 <= mul_i_i282_fu_77_p2;
                 x_read_reg_88 <= x;
             end if;
         end if;
@@ -222,7 +222,7 @@ begin
     empty_5_fu_71_p2 <= std_logic_vector(shift_left(unsigned(x),to_integer(unsigned('0' & ap_const_lv32_1(31-1 downto 0)))));
     empty_fu_65_p2 <= std_logic_vector(shift_left(unsigned(x),to_integer(unsigned('0' & ap_const_lv32_3(31-1 downto 0)))));
     grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start <= grp_fir_Pipeline_Shift_Accum_Loop_fu_53_ap_start_reg;
-    mul_fu_77_p2 <= std_logic_vector(unsigned(empty_fu_65_p2) + unsigned(empty_5_fu_71_p2));
+    mul_i_i282_fu_77_p2 <= std_logic_vector(unsigned(empty_fu_65_p2) + unsigned(empty_5_fu_71_p2));
     y <= acc_1_loc_fu_36;
 
     y_ap_vld_assign_proc : process(ap_CS_fsm_state3)

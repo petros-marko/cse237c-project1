@@ -91,10 +91,10 @@ entry:8 %empty_5 = shl i32 %x_read, i32 1
 
 <Node id="14" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-entry:9 %mul = add i32 %empty, i32 %empty_5
+entry:9 %mul_i_i282 = add i32 %empty, i32 %empty_5
 
 ]]></Node>
-<StgValue><ssdm name="mul"/></StgValue>
+<StgValue><ssdm name="mul_i_i282"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="2" lat="2">
@@ -104,9 +104,9 @@ entry:9 %mul = add i32 %empty, i32 %empty_5
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5">
 <![CDATA[
-entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i32 %fir_int_int_c
+entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -122,9 +122,9 @@ entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul, i32 %x_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32">
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="5">
 <![CDATA[
-entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i32 %fir_int_int_c
+entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul_i_i282, i32 %x_read, i32 %acc_1_loc, i32 %shift_reg, i5 %c
 
 ]]></Node>
 <StgValue><ssdm name="call_ln0"/></StgValue>
@@ -142,10 +142,10 @@ entry:10 %call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i32 %mul, i32 %x_
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:2 %spectopmodule_ln15 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1
+entry:2 %spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln15"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln16"/></StgValue>
 </operation>
 
 <operation id="12" st_id="3" stage="1" lat="1">
@@ -232,10 +232,10 @@ entry:11 %acc_1_loc_load = load i32 %acc_1_loc
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-entry:12 %write_ln40 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %acc_1_loc_load
+entry:12 %write_ln41 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %acc_1_loc_load
 
 ]]></Node>
-<StgValue><ssdm name="write_ln40"/></StgValue>
+<StgValue><ssdm name="write_ln41"/></StgValue>
 </operation>
 
 <operation id="18" st_id="3" stage="1" lat="1">
@@ -247,10 +247,10 @@ entry:12 %write_ln40 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %a
 
 <Node id="18" bw="0">
 <![CDATA[
-entry:13 %ret_ln54 = ret
+entry:13 %ret_ln55 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln54"/></StgValue>
+<StgValue><ssdm name="ret_ln55"/></StgValue>
 </operation>
 </state>
 </state_list>
