@@ -4,7 +4,7 @@
     "calls": "",
     "file": "fir.cpp",
     "fileloc": 16,
-    "instructions": 1026,
+    "instructions": 774,
     "loads": {
       "G": 254
     },
@@ -13,6 +13,6 @@
       "G": 128,
       "T": 1
     },
-    "total_instructions": 1026
+    "total_instructions": 774
   }
 }

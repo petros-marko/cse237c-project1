@@ -3,15 +3,15 @@
         "name": "fir",
         "file": "fir.cpp",
         "fileloc": "16",
-        "instructions": "526",
-        "total_instructions": "526",
+        "instructions": "399",
+        "total_instructions": "399",
         "calls": "",
         "basicblocks": "1",
         "loads": {
-            "G": "127"
+            "G": "64"
         },
         "stores": {
-            "G": "128"
+            "G": "64"
         }
     }
 }

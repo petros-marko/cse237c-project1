@@ -52,13 +52,13 @@ set NewPortList {[
  	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "x", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
 		"CDFG" : "fir",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "117", "EstimateLatencyMax" : "117",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "30", "EstimateLatencyMax" : "30",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -69,22 +69,147 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "y", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "x", "Type" : "None", "Direction" : "I"},
-			{"Name" : "shift_reg", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1", "Parent" : "0"}]}
+			{"Name" : "fir_int_int_shift_reg_4_62", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_63", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_61", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_60", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_59", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_58", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_57", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_56", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_55", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_54", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_53", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_52", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_51", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_50", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_49", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_48", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_47", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_46", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_45", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_44", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_43", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_42", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_41", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_40", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_39", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_38", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_37", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_36", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_35", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_34", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_33", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_32", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_31", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_30", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_29", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_28", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_27", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_26", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_25", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_24", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_23", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_22", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_21", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_20", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_19", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_18", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_17", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_16", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_15", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_13", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "fir_int_int_shift_reg_4_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ama_addmuladd_16ns_16ns_4ns_16ns_16_4_1_U1", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	fir {
-		y {Type O LastRead -1 FirstWrite 65}
-		x {Type I LastRead 11 FirstWrite -1}
-		shift_reg {Type IO LastRead -1 FirstWrite -1}}}
+		y {Type O LastRead -1 FirstWrite 30}
+		x {Type I LastRead 0 FirstWrite -1}
+		fir_int_int_shift_reg_4_62 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_63 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_61 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_60 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_59 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_58 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_57 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_56 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_55 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_54 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_53 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_52 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_51 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_50 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_49 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_48 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_47 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_46 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_45 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_44 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_43 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_42 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_41 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_40 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_39 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_38 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_37 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_36 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_35 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_34 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_33 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_32 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_31 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_30 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_29 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_28 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_27 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_26 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_25 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_24 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_23 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_22 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_21 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_20 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_19 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_18 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_17 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_16 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_15 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_14 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_13 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_12 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_11 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_10 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_9 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_8 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_7 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_6 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_5 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_4 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_3 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_2 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_1 {Type IO LastRead -1 FirstWrite -1}
+		fir_int_int_shift_reg_4_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "117", "Max" : "117"}
-	, {"Name" : "Interval", "Min" : "118", "Max" : "118"}
+	{"Name" : "Latency", "Min" : "30", "Max" : "30"}
+	, {"Name" : "Interval", "Min" : "31", "Max" : "31"}
 ]}
 
 set PipelineEnableSignalInfo {[

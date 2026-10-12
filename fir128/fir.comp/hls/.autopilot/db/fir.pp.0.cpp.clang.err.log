@@ -1,16 +1,16 @@
 /home/linux/ieng6/CSE237C_FA26_001/pmarkopoulos/cse237c-project1/fir128/fir.tcl:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=name=fir_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=fir
         ^
-fir.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS unroll
-        ^
-fir.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=c factor=2 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+fir.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=c factor=2 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
         ^
-fir.cpp:52:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+fir.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=shift_reg factor=2 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_RESHAPE type=block variable=shift_reg factor=2 dim=1
+        ^
+fir.cpp:49:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS unroll
         ^
-fir.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=c factor=2 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
+fir.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
         ^
 5 warnings generated.

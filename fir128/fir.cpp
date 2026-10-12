@@ -20,12 +20,14 @@ void fir (
 {
 
 	ap_int<5> c[N] = {10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+	#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
 	
 	// Write your code here
 	static
 		data_t shift_reg[N];
 		ap_int<16> acc;
 		ap_int<8> i;
+	#pragma HLS ARRAY_RESHAPE type=block variable=shift_reg factor=2 dim=1
 
 	// acc = 0;
 	// Shift_Accum_Loop:
@@ -45,12 +47,10 @@ void fir (
 	Shift_Accum_Loop:
 	for (i = N - 1; i > 0; i--){
 		#pragma HLS unroll
-		#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
 		shift_reg[i] = shift_reg[i - 1];
 	}
 	for (i = N - 1; i > 0; i--){
 		#pragma HLS unroll
-		#pragma HLS ARRAY_RESHAPE type=block variable=c factor=2 dim=1
 		acc += shift_reg[i] * c[i];
 	}
 	acc += x * c[0];

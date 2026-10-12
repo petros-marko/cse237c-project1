@@ -25,23 +25,7 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>47</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>fir.cpp</string>
-      <key>line</key>
-      <integer>48</integer>
+      <integer>23</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +41,23 @@
       <key>filename</key>
       <string>fir.cpp</string>
       <key>line</key>
-      <integer>52</integer>
+      <integer>30</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=shift_reg factor=2 dim=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>fir.cpp</string>
+      <key>line</key>
+      <integer>49</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -77,7 +77,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_reshape_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=type=block variable=c factor=2 dim=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
