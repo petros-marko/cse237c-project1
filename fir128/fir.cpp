@@ -46,6 +46,9 @@ void fir (
 	for (i = N - 1; i > 0; i--){
 		#pragma HLS pipeline off
 		shift_reg[i] = shift_reg[i - 1];
+	}
+	for (i = N - 1; i > 0; i--){
+		#pragma HLS pipeline off
 		acc += shift_reg[i] * c[i];
 	}
 	acc += x * c[0];
