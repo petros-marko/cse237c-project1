@@ -309,7 +309,7 @@ entry:16 %ret_ln56 = ret
 <core>NULL</core><StgValue><ssdm name="x"/></StgValue>
 </port>
 <port id="26" name="shift_reg" dir="2" iftype="1">
-<core>RAM</core><StgValue><ssdm name="shift_reg"/><MemPortTyVec>0 2 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="shift_reg"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="27" name="c" dir="0" iftype="1">

@@ -994,8 +994,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>134</mMinLatency>
-        <mMaxLatency>134</mMaxLatency>
+        <mMinLatency>261</mMinLatency>
+        <mMaxLatency>261</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -1162,7 +1162,7 @@
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
               <first>BRAM</first>
-              <second>2</second>
+              <second>1</second>
             </item>
             <item>
               <first>DSP</first>
@@ -1170,11 +1170,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>177</second>
+              <second>96</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>196</second>
+              <second>194</second>
             </item>
             <item>
               <first>URAM</first>

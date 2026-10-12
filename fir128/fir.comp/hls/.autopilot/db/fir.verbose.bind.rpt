@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Mon Oct 12 11:55:32 2026
+* Date:           Mon Oct 12 13:24:16 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      134|      134|  1.340 us|  1.340 us|  135|  135|       no|
+    |      261|      261|  2.610 us|  2.610 us|  262|  262|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                         |                               |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
         |                 Instance                |             Module            |   min   |   max   |    min   |    max   | min | max |                      Type                      |
         +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
-        |grp_fir_Pipeline_Shift_Accum_Loop_fu_57  |fir_Pipeline_Shift_Accum_Loop  |      132|      132|  1.320 us|  1.320 us|  128|  128|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_fir_Pipeline_Shift_Accum_Loop_fu_57  |fir_Pipeline_Shift_Accum_Loop  |      259|      259|  2.590 us|  2.590 us|  256|  256|  loop auto-rewind stp (delay=0 clock cycles(s))|
         +-----------------------------------------+-------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
 
         * Loop: 
@@ -119,7 +119,7 @@ STG Binding:
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
 Port [ y]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ x]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ shift_reg]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[02]; IO mode=ap_memory:ce=0
+Port [ shift_reg]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[23]; IO mode=ap_memory:ce=0
 Port [ c]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
@@ -172,7 +172,7 @@ ret_ln56           (ret           ) [ 0000]
 <pin id="5" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="shift_reg"/><MemPortTyVec>0 2 </MemPortTyVec>
+<StgValue><ssdm name="shift_reg"/><MemPortTyVec>2 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -589,7 +589,7 @@ ret_ln56           (ret           ) [ 0000]
 |----------|-----------------------------------------|---------|---------|---------|---------|
 | Operation|             Functional Unit             |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|   call   | grp_fir_Pipeline_Shift_Accum_Loop_fu_57 |    1    |  3.2953 |   171   |    94   |
+|   call   | grp_fir_Pipeline_Shift_Accum_Loop_fu_57 |    1    |  5.0026 |   171   |   109   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
 |    add   |             mul_i_i317_fu_93            |    0    |    0    |    0    |    23   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
@@ -605,7 +605,7 @@ ret_ln56           (ret           ) [ 0000]
 |----------|-----------------------------------------|---------|---------|---------|---------|
 |   sext   |             sext_ln42_fu_103            |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|   Total  |                                         |    1    |  3.2953 |   171   |   117   |
+|   Total  |                                         |    1    |  5.0026 |   171   |   132   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -613,9 +613,9 @@ Memories:
 |         |  BRAM  |   FF   |   LUT  |  URAM  |
 +---------+--------+--------+--------+--------+
 |    c    |    0   |    5   |   10   |    -   |
-|shift_reg|    2   |    0   |    0   |    0   |
+|shift_reg|    1   |    0   |    0   |    0   |
 +---------+--------+--------+--------+--------+
-|  Total  |    2   |    5   |   10   |    0   |
+|  Total  |    1   |    5   |   10   |    0   |
 +---------+--------+--------+--------+--------+
 
 * Register list:
@@ -645,10 +645,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |    1   |    3   |   171  |   117  |    -   |
-|   Memory  |    2   |    -   |    -   |    5   |   10   |    0   |
+|  Function |    -   |    1   |    5   |   171  |   132  |    -   |
+|   Memory  |    1   |    -   |    -   |    5   |   10   |    0   |
 |Multiplexer|    -   |    -   |    3   |    0   |   18   |    -   |
 |  Register |    -   |    -   |    -   |   64   |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |    2   |    1   |    6   |   240  |   145  |    0   |
+|   Total   |    1   |    1   |    8   |   240  |   160  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+
