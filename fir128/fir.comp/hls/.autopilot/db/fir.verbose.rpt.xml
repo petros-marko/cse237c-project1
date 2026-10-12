@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'fir'" level="0">
-<item name = "Date">Mon Oct 12 13:26:12 2026
+<item name = "Date">Mon Oct 12 13:28:38 2026
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">fir.comp</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">388, 388, 3.880 us, 3.880 us, 389, 389, no</column>
+<column name="">515, 515, 5.150 us, 5.150 us, 516, 516, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 386, 386, 3.860 us, 3.860 us, 384, 384, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 513, 513, 5.130 us, 5.130 us, 512, 512, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,7 +50,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 23, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, 1, 96, 211, 0</column>
+<column name="Instance">1, 1, 85, 185, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 20, -</column>
 <column name="Register">-, -, 67, -, -</column>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 1, 1, 96, 211, 0</column>
+<column name="grp_fir_Pipeline_Shift_Accum_Loop_fu_57">fir_Pipeline_Shift_Accum_Loop, 1, 1, 85, 185, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

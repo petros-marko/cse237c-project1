@@ -27,13 +27,13 @@
 <EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>386</Best-caseLatency>
-<Average-caseLatency>386</Average-caseLatency>
-<Worst-caseLatency>386</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.860 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.860 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.860 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>384</PipelineInitiationInterval>
+<Best-caseLatency>513</Best-caseLatency>
+<Average-caseLatency>513</Average-caseLatency>
+<Worst-caseLatency>513</Worst-caseLatency>
+<Best-caseRealTimeLatency>5.130 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>5.130 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>5.130 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>512</PipelineInitiationInterval>
 <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -41,9 +41,9 @@
 <Name>Shift_Accum_Loop</Name>
 <Slack>7.30</Slack>
 <TripCount>128</TripCount>
-<Latency>384</Latency>
-<AbsoluteTimeLatency>3.840 us</AbsoluteTimeLatency>
-<PipelineII>3</PipelineII>
+<Latency>511</Latency>
+<AbsoluteTimeLatency>5.110 us</AbsoluteTimeLatency>
+<PipelineII>4</PipelineII>
 <PipelineDepth>4</PipelineDepth>
 <PipelineType>yes</PipelineType>
 <InstanceList>
@@ -72,10 +72,10 @@
 <DSP>1</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>96</FF>
+<FF>85</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>211</LUT>
+<LUT>185</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <URAM>0</URAM>
@@ -205,13 +205,13 @@
 <EstimatedClockPeriod>6.712</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>388</Best-caseLatency>
-<Average-caseLatency>388</Average-caseLatency>
-<Worst-caseLatency>388</Worst-caseLatency>
-<Best-caseRealTimeLatency>3.880 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>3.880 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>3.880 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>389</PipelineInitiationInterval>
+<Best-caseLatency>515</Best-caseLatency>
+<Average-caseLatency>515</Average-caseLatency>
+<Worst-caseLatency>515</Worst-caseLatency>
+<Best-caseRealTimeLatency>5.150 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>5.150 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>5.150 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>516</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfViolations>
@@ -228,10 +228,10 @@
 <DSP>1</DSP>
 <AVAIL_DSP>220</AVAIL_DSP>
 <UTIL_DSP>~0</UTIL_DSP>
-<FF>163</FF>
+<FF>152</FF>
 <AVAIL_FF>106400</AVAIL_FF>
 <UTIL_FF>~0</UTIL_FF>
-<LUT>254</LUT>
+<LUT>228</LUT>
 <AVAIL_LUT>53200</AVAIL_LUT>
 <UTIL_LUT>~0</UTIL_LUT>
 <URAM>0</URAM>
