@@ -27,31 +27,29 @@ void fir (
 		ap_int<16> acc;
 		ap_int<8> i;
 
+	// acc = 0;
+	// Shift_Accum_Loop:
+	// for (i = N - 1; i >= 0; i--){
+	// 	#pragma HLS pipeline II=5
+	// 	if (i == 0) {
+	// 		acc += x * c[0];
+	// 		shift_reg[0] = x;
+	// 	} else {
+	// 		shift_reg[i] = shift_reg[i - 1];
+	// 		acc += shift_reg[i] * c[i];
+	// 	}
+	// }
+	// *y = acc;
+
 	acc = 0;
 	Shift_Accum_Loop:
-	for (i = N - 1; i >= 0; i--){
-		#pragma HLS pipeline II=5
-		if (i == 0) {
-			acc += x * c[0];
-			shift_reg[0] = x;
-		} else {
-			shift_reg[i] = shift_reg[i - 1];
-			acc += shift_reg[i] * c[i];
-		}
+	for (i = N - 1; i > 0; i--){
+		shift_reg[i] = shift_reg[i - 1];
+		acc += shift_reg[i] * c[i];
 	}
+	acc += x * c[0];
+	shift_reg[0] = x;
 	*y = acc;
-
-	// hoisted out below:
-	//
-	// acc = 0;
-	// shift_reg[0] = x;
-	// Shift_Accum_Loop:
-	// for (i = N - 1; i > 0; i--){
-	// 	shift_reg[i] = shift_reg[i - 1];
-	// 	acc += shift_reg[i] * c[i];
-	// }
-	// acc += x * c[0];
-	// *y = acc;
 
 }
 

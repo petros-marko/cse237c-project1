@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'fir'
 ================================================================
-* Date:           Mon Oct 12 13:35:30 2026
+* Date:           Mon Oct 12 13:46:08 2026
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        fir.comp
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      515|      515|  5.150 us|  5.150 us|  516|  516|       no|
+    |      134|      134|  1.340 us|  1.340 us|  135|  135|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -76,29 +76,31 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 5.33>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 4 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%acc_1_loc = alloca i64 1"   --->   Operation 5 'alloca' 'acc_1_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%empty = trunc i32 %x_read"   --->   Operation 6 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i13.i3, i13 %empty, i3 0"   --->   Operation 7 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty_5 = trunc i32 %x_read"   --->   Operation 8 'trunc' 'empty_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_shl8 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i15.i1, i15 %empty_5, i1 0"   --->   Operation 9 'bitconcatenate' 'p_shl8' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (2.07ns)   --->   "%mul_i_i317 = add i16 %p_shl, i16 %p_shl8"   --->   Operation 10 'add' 'mul_i_i317' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 11 [2/2] (3.25ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i16 %mul_i_i317, i32 %x_read, i16 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Generic Core
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%acc_2_loc = alloca i64 1"   --->   Operation 4 'alloca' 'acc_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i16 %acc_2_loc, i32 %shift_reg, i5 %c"   --->   Operation 5 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 2 <SV = 1> <Delay = 2.07>
-ST_2 : Operation 12 [1/2] (2.07ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i16 %mul_i_i317, i32 %x_read, i16 %acc_1_loc, i32 %shift_reg, i5 %c"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 2.07> <CoreType = "Generic">   --->   Generic Core
+State 2 <SV = 1> <Delay = 2.10>
+ST_2 : Operation 6 [1/2] (2.10ns)   --->   "%call_ln0 = call void @fir_Pipeline_Shift_Accum_Loop, i16 %acc_2_loc, i32 %shift_reg, i5 %c"   --->   Operation 6 'call' 'call_ln0' <Predicate = true> <Delay = 2.10> <CoreType = "Generic">   --->   Generic Core
 
-State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [fir.cpp:16]   --->   Operation 13 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %y"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %y, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %x"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %x, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%acc_1_loc_load = load i16 %acc_1_loc"   --->   Operation 18 'load' 'acc_1_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln42 = sext i16 %acc_1_loc_load" [fir.cpp:42]   --->   Operation 19 'sext' 'sext_ln42' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%write_ln42 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %sext_ln42" [fir.cpp:42]   --->   Operation 20 'write' 'write_ln42' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln56 = ret" [fir.cpp:56]   --->   Operation 21 'ret' 'ret_ln56' <Predicate = true> <Delay = 0.00>
+State 3 <SV = 2> <Delay = 3.90>
+ST_3 : Operation 7 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %x"   --->   Operation 7 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 8 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [fir.cpp:16]   --->   Operation 8 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %y"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %y, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %x"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %x, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%acc_2_loc_load = load i16 %acc_2_loc"   --->   Operation 13 'load' 'acc_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln50 = trunc i32 %x_read" [fir.cpp:50]   --->   Operation 14 'trunc' 'trunc_ln50' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i13.i3, i13 %trunc_ln50, i3 0" [fir.cpp:50]   --->   Operation 15 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%trunc_ln50_1 = trunc i32 %x_read" [fir.cpp:50]   --->   Operation 16 'trunc' 'trunc_ln50_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%p_shl6 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i15.i1, i15 %trunc_ln50_1, i1 0" [fir.cpp:50]   --->   Operation 17 'bitconcatenate' 'p_shl6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln50 = add i16 %p_shl, i16 %p_shl6" [fir.cpp:50]   --->   Operation 18 'add' 'add_ln50' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 19 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%acc = add i16 %acc_2_loc_load, i16 %add_ln50" [fir.cpp:50]   --->   Operation 19 'add' 'acc' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 20 [1/1] ( I:3.25ns O:3.25ns )   --->   "%store_ln51 = store i32 %x_read, i32 0" [fir.cpp:51]   --->   Operation 20 'store' 'store_ln51' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln52 = sext i16 %acc" [fir.cpp:52]   --->   Operation 21 'sext' 'sext_ln52' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%write_ln52 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %y, i32 %sext_ln52" [fir.cpp:52]   --->   Operation 22 'write' 'write_ln52' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%ret_ln54 = ret" [fir.cpp:54]   --->   Operation 23 'ret' 'ret_ln54' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -106,18 +108,18 @@ ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln56 = ret" [fir.cpp:56]   ---
 ============================================================
 Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
- <State 1>: 5.331ns
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 2.100ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'fir_Pipeline_Shift_Accum_Loop' [12]  (2.100 ns)
+
+ <State 3>: 3.903ns
 The critical path consists of the following:
 	wire read operation ('x') on port 'x' [5]  (0.000 ns)
-	'add' operation 16 bit ('mul_i_i317') [16]  (2.077 ns)
-	'call' operation 0 bit ('call_ln0') to 'fir_Pipeline_Shift_Accum_Loop' [17]  (3.254 ns)
-
- <State 2>: 2.077ns
-The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'fir_Pipeline_Shift_Accum_Loop' [17]  (2.077 ns)
-
- <State 3>: 0.000ns
-The critical path consists of the following:
+	'add' operation 16 bit ('add_ln50', fir.cpp:50) [18]  (0.000 ns)
+	'add' operation 16 bit ('acc', fir.cpp:50) [19]  (3.903 ns)
 
 
 ============================================================

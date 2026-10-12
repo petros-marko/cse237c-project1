@@ -1,13 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set name fir_mul_16s_5s_16_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler fir_fir_Pipeline_Shift_Accum_Loop_shift_reg_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler fir_mac_muladd_16s_5s_16ns_16_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
@@ -23,48 +17,37 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# Direct connection:
+# XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 5 \
-    name mul_i_i317 \
-    type other \
-    dir I \
+    name shift_reg \
     reset_level 1 \
     sync_rst true \
-    corename dc_mul_i_i317 \
+    dir IO \
+    corename shift_reg \
     op interface \
-    ports { mul_i_i317 { I 16 vector } } \
+    ports { shift_reg_address0 { O 7 vector } shift_reg_ce0 { O 1 bit } shift_reg_we0 { O 1 bit } shift_reg_d0 { O 32 vector } shift_reg_address1 { O 7 vector } shift_reg_ce1 { O 1 bit } shift_reg_q1 { I 32 vector } } \
 } "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'shift_reg'"
 }
+}
+
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
-    name x \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_x \
-    op interface \
-    ports { x { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 7 \
-    name acc_1_out \
+    id 4 \
+    name acc_2_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_acc_1_out \
+    corename dc_acc_2_out \
     op interface \
-    ports { acc_1_out { O 16 vector } acc_1_out_ap_vld { O 1 bit } } \
+    ports { acc_2_out { O 16 vector } acc_2_out_ap_vld { O 1 bit } } \
 } "
 }
 
